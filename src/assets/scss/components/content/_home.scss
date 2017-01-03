@@ -1,0 +1,23 @@
+#intro-title{
+    color: $mainColor;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    .my {
+        display: block;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+}
+
+#intro-description {
+    font-size: 0.7rem;
+    color: #546E7A;
+}
+
+#image {
+    min-width: 200px;
+    padding: 25px;
+}

@@ -2,15 +2,22 @@
     display: inline-block;
     border-radius: 2px;
     min-width: 460px;
+    max-width: 600px;
     min-height: 260px;
     overflow: hidden;
     text-transform: capitalize;
+    font-weight: 300;
+    padding: 15px;
     @include box_shadow(3);
+}
+
+#content {
+    margin-top: 15px;
 }
 
 .card-header {
     padding: 10px;
     min-height: 20px;
-    background-color: #263238;
-    color: #fff;
+    border-bottom: 1px solid rgba(0,0,0, .1);
+    color: #263238;
 }

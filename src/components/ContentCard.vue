@@ -1,9 +1,12 @@
 <template>
   <div id="content-card">
     <div class="card-header flex flex-full-center">
-        home
+        <!--LANGUAGES-->
     </div>
-    <Home />
+    <div id="content" class="flex flex-c">
+        <Home />
+    </div>
+    
   </div>
 </template>
 

@@ -1,3 +1,5 @@
+$mainColor: #607D8B;
+
 /* Libs and defaults */
 @import 'lib/reset';
 @import 'lib/fonts';
@@ -7,3 +9,4 @@
 
 /* Component Styles */
 @import 'components/contentCard';
+@import 'components/content/home';
