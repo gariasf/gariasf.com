@@ -1,0 +1,16 @@
+#content-card {
+    display: inline-block;
+    border-radius: 2px;
+    min-width: 460px;
+    min-height: 260px;
+    overflow: hidden;
+    text-transform: capitalize;
+    @include box_shadow(3);
+}
+
+.card-header {
+    padding: 10px;
+    min-height: 20px;
+    background-color: #263238;
+    color: #fff;
+}
