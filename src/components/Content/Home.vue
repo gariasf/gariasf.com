@@ -12,8 +12,8 @@
         </div>
     </div>
     <div id="profile">
-        <div id="image">
-            
+        <div id="image" class="m-auto">
+            <img src="../../assets/img/sample-profile.png" alt="" class="img-responsive">
         </div>
     </div>
   </div>

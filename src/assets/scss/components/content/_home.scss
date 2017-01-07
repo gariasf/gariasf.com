@@ -1,3 +1,8 @@
+/* Intro section */
+#intro {
+    width: 65%;
+}
+
 #intro-title{
     color: $mainColor;
     line-height: 1;
@@ -17,7 +22,12 @@
     color: #546E7A;
 }
 
+/* Profile section */
+#profile {
+    width: 35%;
+    padding: 0 10px 10px 10px;
+}
+
 #image {
-    min-width: 200px;
-    padding: 25px;
+    max-width: 135px;
 }

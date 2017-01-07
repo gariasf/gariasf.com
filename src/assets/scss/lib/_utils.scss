@@ -12,6 +12,11 @@ General utils
     cursor: pointer!important;
 }
 
+/* Traditional horizontal centering */
+.m-auto {
+    margin: 0 auto;
+}
+
 /* 
 Flexbox utils 
 */
@@ -39,6 +44,11 @@ Flexbox utils
     align-items: center;
 }
 
+/* Responsive image element */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
 
 /**
  * A mixin which helps you to add depth to elements according to the Google Material Design spec:
