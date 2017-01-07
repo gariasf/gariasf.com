@@ -7,3 +7,28 @@
     width: 100vw;
     min-height: 100vh;
 }
+
+/* Things have to look good man, anything smaller than 300px is just too small. */
+#sm_overlay {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 30;
+    position: absolute;
+    background: #fff;
+    p{
+        padding: 10px;
+        font-size: .9em;
+    }
+}
+
+/* Show the overlay and hide anything else to reduce impact in case of viewport<300px */
+@media (max-width:300px) {
+    #sm_overlay {
+        display: flex!important;
+    }
+    #content-card {
+        display: none!important;
+    }
+}
+
