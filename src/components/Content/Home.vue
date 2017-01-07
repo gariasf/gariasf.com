@@ -1,5 +1,5 @@
 <template>
-  <div id="home" class="flex flex-c">
+  <div id="home" class="flex flex-full-center">
     <div id="intro">
         <div id="intro-title">
             <span class="my">Hello</span>
@@ -11,17 +11,22 @@
             </p>
         </div>
     </div>
-    <div id="profile">
+    <div id="profile" class="flex flex-dc flex-full-center">
         <div id="image" class="m-auto">
             <img src="../../assets/img/sample-profile.png" alt="" class="img-responsive">
         </div>
+        <LargeButton />
     </div>
   </div>
 </template>
 
 <script>
+    import LargeButton from './../Atoms/LargeButton.vue'
+
   export default {
     name: 'home',
-    components: {}
+    components: {
+        LargeButton
+    }
   }
 </script>

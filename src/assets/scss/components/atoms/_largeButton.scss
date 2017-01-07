@@ -1,0 +1,13 @@
+.large-button {
+    p {
+        text-align: center;
+        font-size: .85em;
+    }
+    padding: 8px 12px;
+    width: 100%;
+    max-width: calc(100% - 72px);
+    @include box_shadow(2);
+    background-color: #03A9F4;
+    color: #fff;
+    border-radius: 2px;
+}

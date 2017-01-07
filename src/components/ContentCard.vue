@@ -3,7 +3,7 @@
     <div class="card-header flex flex-full-center">
         <!--LANGUAGES-->
     </div>
-    <div id="content" class="flex flex-c">
+    <div id="content" class="flex">
         <Home />
     </div>
     

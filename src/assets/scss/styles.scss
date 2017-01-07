@@ -1,11 +1,23 @@
+/* Global vars */
 $mainColor: #607D8B;
+$break-s: 20em; /* smartphones, iPhone, portrait 480x320 phones */
+$break-sm: 30.063em; /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+$break-m: 40.063em; /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+$break-ml: 60.063em; /* tablet, landscape iPad, lo-res laptops ands desktops */
+$break-l: 64.063em; /* big landscape tablets, laptops, and desktops */
+$break-ll: 80.063em; /* hi-res laptops and desktops */
+
 
 /* Libs and defaults */
 @import 'lib/reset';
 @import 'lib/fonts';
 @import 'lib/utils';
+
 /* General App Style */
 @import 'app';
+
+/* UI Components */
+@import 'components/atoms/largeButton';
 
 /* Component Styles */
 @import 'components/contentCard';

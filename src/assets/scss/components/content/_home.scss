@@ -29,5 +29,14 @@
 }
 
 #image {
-    max-width: 135px;
+    max-width: 152px;
+}
+
+@media (max-width:$break-sm) {
+    #home {
+        flex-direction: column;
+    }
+    #profile, #intro {
+        width: 100%;
+    }
 }
