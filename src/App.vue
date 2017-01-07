@@ -1,22 +1,21 @@
 <template>
-  <div id="app" class="flex flex-full-center">
-    <ContentCard />
-    <Gtfo />
-  </div>
-  
+    <div id="app" class="flex flex-full-center">
+        <ContentCard />
+        <Gtfo />
+    </div>  
 </template>
 
 <script>
-import Gtfo from './components/Gtfo.vue'
-import ContentCard from './components/ContentCard.vue'
+    import Gtfo from './components/Gtfo.vue'
+    import ContentCard from './components/ContentCard.vue'
 
-export default {
-  name: 'app',
-  components: {
-      ContentCard,
-      Gtfo
-  }
-}
+    export default {
+        name: 'app',
+        components: {
+            ContentCard,
+            Gtfo
+        }
+    }
 </script>
 
 <style lang="scss">
