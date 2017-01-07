@@ -3,9 +3,7 @@
         text-align: center;
         font-size: .85em;
     }
-    padding: 8px 12px;
-    width: 100%;
-    max-width: calc(100% - 72px);
+    padding: 8px 32px;
     @include box_shadow(2);
     background-color: #03A9F4;
     color: #fff;

@@ -1,5 +1,5 @@
 <template>
-  <div id="home" class="flex flex-full-center">
+  <div id="home" class="flex flex-main-center">
     <div id="intro">
         <div id="intro-title">
             <span class="my">Hello</span>

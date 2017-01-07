@@ -25,16 +25,21 @@
 /* Profile section */
 #profile {
     width: 35%;
-    padding: 0 10px 10px 10px;
+}
+
+#profile, #intro {
+    padding: 15px 0;
 }
 
 #image {
     max-width: 152px;
 }
 
+/* Media queries */
 @media (max-width:$break-sm) {
     #home {
         flex-direction: column;
+        align-items: center;
     }
     #profile, #intro {
         width: 100%;
