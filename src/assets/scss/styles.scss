@@ -22,7 +22,8 @@ $telegram: #54b3e6;
 
 /* UI Components */
 @import 'components/atoms/largeButton';
-@import 'components/atoms/_socialIcons';
+@import 'components/atoms/socialIcons';
+@import 'components/atoms/languageButton';
 
 /* Component Styles */
 @import 'components/contentCard';

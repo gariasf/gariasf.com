@@ -1,0 +1,11 @@
+.lang-button {
+    border-radius: 100%;
+    padding: 5px;
+    border: 1px solid $main-color;
+    color: $main-color;
+    margin: 0 5px;
+    &.active {
+        color: #fff;
+        background: $main-color;
+    }
+}

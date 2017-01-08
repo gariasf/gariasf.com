@@ -8,7 +8,7 @@
 </template>
 
 <script>
-    import SocialIcon from './../../Atoms/SocialIcon.vue'
+    import SocialIcon from './../../../Atoms/SocialIcon.vue'
     
     export default {
         name: 'social',

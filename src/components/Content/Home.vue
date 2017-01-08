@@ -9,9 +9,9 @@
 </template>
 
 <script>
-    import Intro from './../Content/Partials/Intro.vue'
-    import Profile from './../Content/Partials/Profile.vue'
-    import Social from './../Content/Partials/Social.vue'
+    import Intro from './../Content/Partials/Home/Intro.vue'
+    import Profile from './../Content/Partials/Home/Profile.vue'
+    import Social from './../Content/Partials/Home/Social.vue'
 
     export default {
         name: 'home',
