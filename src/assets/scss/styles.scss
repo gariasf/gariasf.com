@@ -1,5 +1,5 @@
 /* Global vars */
-$mainColor: #607D8B;
+$main-color: darken(#CBCFD9, 20%);
 $break-s: 20em; /* smartphones, iPhone, portrait 480x320 phones */
 $break-sm: 30.063em; /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 $break-m: 40.063em; /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
@@ -8,9 +8,9 @@ $break-l: 64.063em; /* big landscape tablets, laptops, and desktops */
 $break-ll: 80.063em; /* hi-res laptops and desktops */
 
 /* Social Icon Colors */
-  $github: #000;
-  $twitter: #00aced;
-  $telegram: #54b3e6;
+$github: #000;
+$twitter: #00aced;
+$telegram: #54b3e6;
 
 /* Libs and defaults */
 @import 'lib/reset';

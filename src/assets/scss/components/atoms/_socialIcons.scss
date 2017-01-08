@@ -1,13 +1,21 @@
 .social-icon {
-    width: 36px;
-    height: 36px;
+    margin: 0 10px;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    &.small {
+        width: 20px!important;
+        height: 20px!important;
+        margin: 0 5px!important;
+    }
 }
 
 .twitter path,
 .github path,
-.telegram path {
+.telegram path,
+.email path {
   transition: fill .2s ease-in;
-  fill: #607D8B;
+  fill: $main-color;
 }
 
 .twitter:hover path{
@@ -20,4 +28,14 @@
 
 .telegram:hover path{
   fill: $telegram;
+}
+
+
+@media (max-width:$break-sm) {
+    .social-icon{
+        &.small {
+            width: 36px!important;
+            height: 36px!important;
+        }
+    }
 }
