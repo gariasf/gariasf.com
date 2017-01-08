@@ -3,7 +3,7 @@
         <SocialIcon iconName="twitter" />
         <SocialIcon iconName="github" />
         <SocialIcon iconName="telegram" />
-        <p class="email-container pointer"><SocialIcon iconName="mail" /><span>Contact me at {{writeEmail()}}</span></p>
+        <p class="email-container pointer"><SocialIcon iconName="mail" /><span>{{this.$root.lang.contact.emailString}} {{writeEmail()}}</span></p>
     </div>
 </template>
 

@@ -3,7 +3,7 @@
         <div id="image" class="m-auto">
             <img src="../../../../assets/img/sample-profile.png" alt="" class="img-responsive">
         </div>
-        <LargeButton />
+        <LargeButton :buttonText=this.$root.lang.workButton />
     </div>
 </template>
 
