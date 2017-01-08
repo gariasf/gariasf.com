@@ -1,5 +1,5 @@
 <template>
-    <div id="intro">
+    <div id="intro" class="flex flex-dc">
         <div id="intro-title">
             <span class="my">Hello</span>
             World.
@@ -9,12 +9,17 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere cum sit aut quos quia temporibus officia veniam, ducimus esse non. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, obcaecati.
             </p>
         </div>
+        <Social />
     </div>
 </template>
 
 <script>
+    import Social from './Social.vue'
+
     export default {
         name: 'intro',
-        components: {}
+        components: {
+            Social
+        }
     }
 </script>

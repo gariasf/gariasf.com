@@ -7,6 +7,10 @@ $break-ml: 60.063em; /* tablet, landscape iPad, lo-res laptops ands desktops */
 $break-l: 64.063em; /* big landscape tablets, laptops, and desktops */
 $break-ll: 80.063em; /* hi-res laptops and desktops */
 
+/* Social Icon Colors */
+  $github: #000;
+  $twitter: #00aced;
+  $telegram: #54b3e6;
 
 /* Libs and defaults */
 @import 'lib/reset';
@@ -18,6 +22,7 @@ $break-ll: 80.063em; /* hi-res laptops and desktops */
 
 /* UI Components */
 @import 'components/atoms/largeButton';
+@import 'components/atoms/_socialIcons';
 
 /* Component Styles */
 @import 'components/contentCard';

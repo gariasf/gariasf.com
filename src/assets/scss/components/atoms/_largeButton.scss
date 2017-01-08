@@ -8,4 +8,8 @@
     background-color: #03A9F4;
     color: #fff;
     border-radius: 2px;
+    transition: box-shadow .2s ease;
+    &:hover {
+        @include box_shadow(3);
+    }
 }

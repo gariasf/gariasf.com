@@ -1,0 +1,23 @@
+.social-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.twitter path,
+.github path,
+.telegram path {
+  transition: fill .2s ease-in;
+  fill: #607D8B;
+}
+
+.twitter:hover path{
+  fill: $twitter;
+}
+
+.github:hover path{
+  fill: $github;
+}
+
+.telegram:hover path{
+  fill: $telegram;
+}

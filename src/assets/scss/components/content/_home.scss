@@ -1,6 +1,7 @@
 /* Intro section */
 #intro {
     width: 65%;
+    justify-content: space-between;
 }
 
 #intro-title{
@@ -9,7 +10,6 @@
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 300;
-    margin-bottom: 10px;
     .my {
         display: block;
         font-weight: 700;
@@ -35,6 +35,10 @@
     max-width: 152px;
 }
 
+#social {
+    justify-content: space-around;
+}
+
 /* Media queries */
 @media (max-width:$break-sm) {
     #home {
@@ -44,5 +48,15 @@
     
     #profile, #intro {
         width: 100%;
+    }
+
+    #social {
+        text-align: center;
+        margin: 15px 0;
+        .social-icon {
+            margin: 0;
+            width: 44px;
+            height: 44px;
+        }
     }
 }
