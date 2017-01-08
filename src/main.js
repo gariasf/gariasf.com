@@ -20,7 +20,7 @@ new Vue({
     },
     methods: {
         updateLang: function(languageId){
-            /* Update current language to the object's language, which is the language prop from the clicked button */
+            /* Update current language to the passed one, which is the prop from the clicked button */
             this.activeLanguage = languageId;
            
            if(languageId == 0){

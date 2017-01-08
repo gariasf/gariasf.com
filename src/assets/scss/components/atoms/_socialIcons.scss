@@ -14,20 +14,20 @@
 .github path,
 .telegram path,
 .email path {
-  transition: fill .2s ease-in;
-  fill: $main-color;
+    transition: fill .2s ease-in;
+    fill: $main-color;
 }
 
 .twitter:hover path{
-  fill: $twitter;
+    fill: $twitter;
 }
 
 .github:hover path{
-  fill: $github;
+    fill: $github;
 }
 
 .telegram:hover path{
-  fill: $telegram;
+    fill: $telegram;
 }
 
 
