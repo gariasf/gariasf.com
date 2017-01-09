@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
+import NotFound from './components/NotFound.vue'
 
 /* Language objects */
 import es from './assets/lang/langEs.js'
@@ -8,26 +9,25 @@ import en from './assets/lang/langEn.js'
 import ca from './assets/lang/langCa.js'
 
 /* Content components */
-import NotFound from './components/NotFound.vue'
 import Home from './components/Content/Home.vue'
 import Work from './components/Content/Work.vue'
 
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  mode: 'history',
-  routes: [
+    mode: 'history',
+    routes: [
     { path: '/', component: App,
-      children: [
-        {
-          path: '',
-          component: Home
-        },
-        {
-            path: 'work',
-            component: Work
-        }
-      ],
+        children: [
+            {
+                path: '',
+                component: Home
+            },
+            {
+                path: 'work',
+                component: Work
+            }
+        ],
     },
     /* If none of the avove matches, show 404 err */
     {path: '*', component: NotFound}
@@ -35,11 +35,11 @@ const router = new VueRouter({
 })
 
 new Vue({
-  router,
-  data () {
+    router,
+    data () {
         return {
             languages: ['En', 'Ca', 'Es'], /* Array of aviable languages to map them with their corresponding id (pos) when necessary */
-            activeLanguage: 0, /* Define the default active language */
+            activeLanguage: 0, /* Set the default active language */
             lang: en /* Set the default language object */
         }
     },

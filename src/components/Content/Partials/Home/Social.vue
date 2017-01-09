@@ -1,19 +1,19 @@
 <template>
     <div id="social" class="flex flex-cross-center">
-        <a href="https://www.twitter.com/gariasf" target="_blank"><SocialIcon iconName="twitter" /></a>
-        <a href="https://www.github.com/gariasf" target="_blank"><SocialIcon iconName="github" /></a>
-        <a href="https://telegram.me/TheWaterMelonMan" target="_blank"><SocialIcon iconName="telegram" /></a>
-        <a v-bind:href="writeEmail('link')"><p class="email-container pointer"><SocialIcon iconName="mail" /><span>{{this.$root.lang.contact.emailString}} <strong>{{writeEmail('text')}}</strong></span></p></a>
+        <a href="https://www.twitter.com/gariasf" target="_blank"><Icon iconName="twitter" /></a>
+        <a href="https://www.github.com/gariasf" target="_blank"><Icon iconName="github" /></a>
+        <a href="https://telegram.me/TheWaterMelonMan" target="_blank"><Icon iconName="telegram" /></a>
+        <a v-bind:href="writeEmail('link')"><p class="email-container pointer"><Icon iconName="mail" /><span>{{this.$root.lang.contact.emailString}} <strong>{{writeEmail('text')}}</strong></span></p></a>
     </div>
 </template>
 
 <script>
-    import SocialIcon from './../../../Atoms/SocialIcon.vue'
+    import Icon from './../../../Atoms/Icons.vue'
     
     export default {
         name: 'social',
         components: {
-            SocialIcon
+            Icon
         },
         methods: {
             writeEmail: function(type){
