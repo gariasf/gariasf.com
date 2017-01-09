@@ -1,13 +1,31 @@
 import Vue from 'vue'
+import VueRouter from 'vue-router'
 import App from './App.vue'
 import es from './assets/lang/langEs.js'
 import en from './assets/lang/langEn.js'
 import ca from './assets/lang/langCa.js'
+import Home from './components/Content/Home.vue'
+
+Vue.use(VueRouter)
+
+const router = new VueRouter({
+  mode: 'history',
+  routes: [
+    { path: '/', component: App,
+      children: [
+        {
+          path: '',
+          component: Home
+        }
+      ],
+    }
+    // {path: '*', component: NotFound}
+  ]
+})
 
 new Vue({
-    el: '#app-root',
-    render: h => h(App),
-    data () {
+  router,
+  data () {
         return {
             languages: ['En', 'Ca', 'Es'], /* Array of aviable languages to map them with their corresponding id (pos) when necessary */
             activeLanguage: 0, /* Define the default active language */
@@ -29,4 +47,4 @@ new Vue({
            }
         }
     }
-})
+}).$mount('#app-root')

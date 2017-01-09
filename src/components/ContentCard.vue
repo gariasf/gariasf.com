@@ -4,7 +4,7 @@
             <LanguageSelector />
         </div>
         <div id="content" class="flex">
-            <Home />
+            <router-view></router-view>
         </div>
     </div>
 </template>
