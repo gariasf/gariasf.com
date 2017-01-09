@@ -1,10 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
+
+/* Language objects */
 import es from './assets/lang/langEs.js'
 import en from './assets/lang/langEn.js'
 import ca from './assets/lang/langCa.js'
+
+/* Content components */
+import NotFound from './components/NotFound.vue'
 import Home from './components/Content/Home.vue'
+import Work from './components/Content/Work.vue'
 
 Vue.use(VueRouter)
 
@@ -16,10 +22,15 @@ const router = new VueRouter({
         {
           path: '',
           component: Home
+        },
+        {
+            path: 'work',
+            component: Work
         }
       ],
-    }
-    // {path: '*', component: NotFound}
+    },
+    /* If none of the avove matches, show 404 err */
+    {path: '*', component: NotFound}
   ]
 })
 
@@ -34,7 +45,7 @@ new Vue({
     },
     methods: {
         updateLang: function(languageId){
-            /* Update current app language to the passed one, which is the prop from the clicked button */
+            /* Update current app language to the passed one, which is a prop from the clicked button */
             this.activeLanguage = languageId;
            
            /* Depending on the new language id, load it's corresponding language object */

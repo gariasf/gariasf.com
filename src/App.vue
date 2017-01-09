@@ -9,7 +9,7 @@
 <script>
     import SmOverlay from './components/SmOverlay.vue'
     import ContentCard from './components/ContentCard.vue'
-    import AppFooter from './components/Content/AppFooter.vue'
+    import AppFooter from './components/Content/Partials/AppFooter.vue'
 
     export default {
         name: 'app',
