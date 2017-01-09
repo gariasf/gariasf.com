@@ -1,19 +1,19 @@
 <template>
     <div id="app" class="flex flex-full-center">
         <ContentCard />
-        <Gtfo />
+        <SmOverlay />
     </div>  
 </template>
 
 <script>
-    import Gtfo from './components/Gtfo.vue'
+    import SmOverlay from './components/SmOverlay.vue'
     import ContentCard from './components/ContentCard.vue'
 
     export default {
         name: 'app',
         components: {
             ContentCard,
-            Gtfo
+            SmOverlay
         }
     }
 </script>

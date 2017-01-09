@@ -7,7 +7,7 @@
 
 <script>
     export default {
-        name: 'gtfo',
+        name: 'sm-overlay',
         components: {}
     }
 </script>

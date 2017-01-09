@@ -9,20 +9,17 @@ new Vue({
     render: h => h(App),
     data () {
         return {
-            languages: ['En', 'Ca', 'Es'],
-            activeLanguage: 0,
-            lang: en
+            languages: ['En', 'Ca', 'Es'], /* Array of aviable languages to map them with their corresponding id (pos) when necessary */
+            activeLanguage: 0, /* Define the default active language */
+            lang: en /* Set the default language object */
         }
-    },
-    created: function(){
-        /* Set initial language setting */
-        this.$root.lang = en;
     },
     methods: {
         updateLang: function(languageId){
-            /* Update current language to the passed one, which is the prop from the clicked button */
+            /* Update current app language to the passed one, which is the prop from the clicked button */
             this.activeLanguage = languageId;
            
+           /* Depending on the new language id, load it's corresponding language object */
            if(languageId == 0){
                 this.lang = en
            } else if (languageId == 1){
