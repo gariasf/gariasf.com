@@ -1,6 +1,7 @@
 <template>
-    <div id="app" class="flex flex-full-center">
+    <div id="app" class="flex flex-dc flex-full-center">
         <ContentCard />
+        <AppFooter />
         <SmOverlay />
     </div>  
 </template>
@@ -8,12 +9,14 @@
 <script>
     import SmOverlay from './components/SmOverlay.vue'
     import ContentCard from './components/ContentCard.vue'
+    import AppFooter from './components/Content/AppFooter.vue'
 
     export default {
         name: 'app',
         components: {
             ContentCard,
-            SmOverlay
+            SmOverlay,
+            AppFooter
         }
     }
 </script>

@@ -6,7 +6,8 @@
     &.small {
         width: 20px!important;
         height: 20px!important;
-        margin: 0 5px!important;
+        margin: 0!important;
+        vertical-align: bottom!important;
     }
 }
 
@@ -28,14 +29,4 @@
 
 .telegram:hover path{
     fill: $telegram;
-}
-
-
-@media (max-width:$break-sm) {
-    .social-icon{
-        &.small {
-            width: 36px!important;
-            height: 36px!important;
-        }
-    }
 }
