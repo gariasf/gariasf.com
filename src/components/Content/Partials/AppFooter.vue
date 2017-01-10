@@ -1,6 +1,6 @@
 <template>
     <div id="footer" class="flex flex-full-center">
-        <p>{{this.$root.lang.footer.name}}&nbsp;-&nbsp;{{this.currentYear}}&nbsp;-&nbsp;{{this.$root.lang.footer.fromGithub}}&nbsp;<a href="https://github.com/gariasf/gariasf.com" target="_blank"><Icon iconName="github" isSmall="true" /></a>&nbsp;-&nbsp;<a href="http://codepen.io/kekkorider/pen/RaPWwe" target="_blank">{{this.$root.lang.footer.inspiredBy}}</a></p>
+        <p>{{this.$root.lang.footer.name}}&nbsp;-&nbsp;{{this.currentYear}}&nbsp;-&nbsp;<a href="https://github.com/gariasf/gariasf.com" target="_blank"><Icon iconName="github" isSmall="true" /></a></p>
     </div>
 </template>
 

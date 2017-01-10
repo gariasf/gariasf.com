@@ -7,9 +7,7 @@ module.exports = {
         emailString: 'Mándame un mensaje a'
     },
     footer: {
-        name: 'Guillem Arias',
-        fromGithub: 'Servido des de',
-        inspiredBy: 'Inspirado por esto.'
+        name: 'Guillem Arias'
     },
     workButton: 'Mi trabajo'
 }
