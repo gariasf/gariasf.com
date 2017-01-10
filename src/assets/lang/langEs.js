@@ -9,5 +9,8 @@ module.exports = {
     footer: {
         name: 'Guillem Arias'
     },
-    workButton: 'Mi trabajo'
+    misc: {
+        workButton: 'Mi trabajo',
+        active: 'Activo'
+    }
 }

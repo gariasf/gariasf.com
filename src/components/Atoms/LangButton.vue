@@ -1,6 +1,6 @@
 <template>
-    <div :class="['lang-button', 'pointer', {'active': activeLanguage == languageId}]" v-on:click="handleClick()">
-        {{this.$root.languages[languageId]}}
+    <div class="lang-button pointer" v-on:click="handleClick()">
+        {{this.$root.languages[languageId]}}&nbsp;<span v-if="activeLanguage == languageId">{{this.$root.lang.misc.active}}</span>
     </div>
 </template>
 

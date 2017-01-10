@@ -1,5 +1,5 @@
 <template>
-    <div id="intro" class="flex flex-dc">
+    <div id="intro" class="flex flex-dc no-select">
         <div id="intro-title">
             <span class="my">{{this.$root.lang.intro.hello}}</span>
             {{this.$root.lang.intro.world}}.

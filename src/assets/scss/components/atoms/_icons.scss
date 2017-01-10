@@ -11,7 +11,7 @@
     }
 }
 
-/* Init settings */
+/* Light bg icons */
 .twitter path,
 .github path,
 .telegram path,
@@ -20,7 +20,10 @@
     fill: $main-color;
 }
 
-.arrow-back path {
+/* Dark bg icons */
+.arrow-back path,
+.earth path {
+    transition: fill .2s ease-in;
     fill: lighten($main-color, 50%);
 }
 

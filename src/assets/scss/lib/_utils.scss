@@ -45,6 +45,11 @@ Flexbox utils
     height: auto;
 }
 
+/* Transparent selection */
+.no-select *::selection {
+    background: transparent!important;
+}
+
 /**
  * A mixin which helps you to add depth to elements according to the Google Material Design spec:
  * http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality

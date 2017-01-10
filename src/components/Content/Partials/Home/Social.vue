@@ -3,7 +3,7 @@
         <a href="https://www.twitter.com/gariasf" target="_blank"><Icon iconName="twitter" /></a>
         <a href="https://www.github.com/gariasf" target="_blank"><Icon iconName="github" /></a>
         <a href="https://telegram.me/TheWaterMelonMan" target="_blank"><Icon iconName="telegram" /></a>
-        <a v-bind:href="writeEmail('link')"><p class="email-container pointer"><Icon iconName="mail" /><span>{{this.$root.lang.contact.emailString}} <strong>{{writeEmail('text')}}</strong></span></p></a>
+        <a v-bind:href="writeEmail('link')"><p class="email-container pointer no-select"><Icon iconName="mail" /><span>{{this.$root.lang.contact.emailString}} <strong>{{writeEmail('text')}}</strong></span></p></a>
     </div>
 </template>
 

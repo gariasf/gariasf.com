@@ -7,7 +7,7 @@
     width: 90px;
     padding: 8px 32px;
     @include box_shadow(2);
-    background-color: #03A9F4;
+    background-color: $accent-color;
     color: #fff;
     border-radius: 2px;
     transition: box-shadow .2s ease;
