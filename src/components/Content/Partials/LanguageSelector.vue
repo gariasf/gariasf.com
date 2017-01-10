@@ -1,5 +1,5 @@
 <template>
-    <div id="lang-selector" class="flex no-select">
+    <div id="lang-selector" class="flex no-select" v-on-clickaway="handleClickAway">
         <a v-on:click.prevent="handleClick()"><Icon iconName="earth" /></a>
         <div v-if="this.listActive" id="language-list">
             <LangButton languageId=0 :activeLanguage=this.$root.activeLanguage />
@@ -10,6 +10,7 @@
 </template>
 
 <script>
+    import { mixin as clickaway } from 'vue-clickaway';
     import LangButton from './../../Atoms/LangButton.vue'
     import Icon from './../../Atoms/Icons.vue'
     
@@ -23,6 +24,7 @@
             LangButton,
             Icon
         },
+        mixins: [ clickaway ],
         data: function() {
             return {
                 listActive: false
@@ -31,6 +33,13 @@
         methods: {
             handleClick: function() {
                 this.listActive = !this.listActive;
+            },
+            handleClickAway: function() {
+                if(this.listActive) {
+                    this.listActive = !this.listActive;
+                } else {
+                    return;
+                }
             }
         }
     }
