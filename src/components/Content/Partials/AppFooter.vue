@@ -2,7 +2,7 @@
     <div id="footer" class="flex flex-full-center no-select">
         <p>{{this.$root.lang.footer.name}}&nbsp;-&nbsp;{{this.currentYear}}&nbsp;-&nbsp;
             <a href="https://github.com/gariasf/gariasf.com" target="_blank">
-                <Icon iconName="github" isSmall="true" />
+                <Icon name="github" isSmall="true" pointer="true" />
             </a>
         </p>
     </div>

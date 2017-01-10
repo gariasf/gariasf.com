@@ -1,8 +1,8 @@
 <template>
      <div class="card-header flex flex-full-center no-select">
-            <router-link class="home-link" to="/"><Icon v-if="$route.path == '/work'" iconName="arrow-back" /></router-link>
+            <router-link class="home-link" to="/"><Icon v-if="$route.path == '/work'" name="arrow-back" pointer="true"/></router-link>
             <span id="content-title" class="flex-cross-center">
-                <Icon :iconName="getIconName()" isSmall="true" />&nbsp;<span>{{this.getTitle()}}</span>
+                <Icon :name="getIconName()" isSmall="true" />&nbsp;<span>{{this.getTitle()}}</span>
             </span>
             <LanguageSelector />
         </div>

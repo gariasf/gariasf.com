@@ -1,10 +1,10 @@
 <template>
     <div id="social" class="flex flex-cross-center">
-        <a href="https://www.twitter.com/gariasf" target="_blank"><Icon iconName="twitter" /></a>
-        <a href="https://www.github.com/gariasf" target="_blank"><Icon iconName="github" /></a>
-        <a href="https://telegram.me/TheWaterMelonMan" target="_blank"><Icon iconName="telegram" /></a>
+        <a href="https://www.twitter.com/gariasf" target="_blank"><Icon name="twitter" pointer="true" /></a>
+        <a href="https://www.github.com/gariasf" target="_blank"><Icon name="github" pointer="true" /></a>
+        <a href="https://telegram.me/TheWaterMelonMan" target="_blank"><Icon name="telegram" pointer="true" /></a>
         <a v-bind:href="writeEmail('link')">
-            <p class="email-container pointer no-select"><Icon iconName="mail" />
+            <p class="email-container pointer no-select"><Icon name="mail" pointer="true" />
                 <span>{{this.$root.lang.footer.emailString}} <strong>{{writeEmail('text')}}</strong></span>
             </p>
         </a>

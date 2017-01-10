@@ -1,6 +1,6 @@
 <template>
     <div id="lang-selector" class="flex no-select" v-on-clickaway.prevent="handleClickAway">
-        <a v-on:click.prevent="handleClick()"><Icon iconName="earth" /></a>
+        <a v-on:click.prevent="handleClick()"><Icon name="earth" pointer="true" /></a>
         <div v-if="this.listActive" id="language-list">
             <LangButton languageId=0 :activeLanguage=this.$root.activeLanguage />
             <LangButton languageId=1 :activeLanguage=this.$root.activeLanguage />
