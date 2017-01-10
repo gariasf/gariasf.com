@@ -45,7 +45,7 @@ Flexbox utils
     height: auto;
 }
 
-/* Transparent selection */
+/* Transparent selection for the element and all its child elements*/
 .no-select *::selection {
     background: transparent!important;
 }

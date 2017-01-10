@@ -7,11 +7,9 @@ module.exports = {
         hello: 'hola',
         world: 'mundo'
     },
-    contact: {
-        emailString: 'Mándame un mensaje a'
-    },
     footer: {
-        name: 'Guillem Arias'
+        name: 'Guillem Arias',
+        emailString: 'Mándame un mensaje a'
     },
     misc: {
         workButton: 'Mi trabajo',

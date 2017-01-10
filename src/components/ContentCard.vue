@@ -2,6 +2,7 @@
     <div id="content-card">
         <AppHeader />
         <div id="content" class="flex">
+            <!-- vue-router will place a component here -->
             <router-view></router-view>
         </div>
     </div>

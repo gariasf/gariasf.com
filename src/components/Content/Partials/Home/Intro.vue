@@ -6,6 +6,7 @@
         </div>
         <div id="intro-description">
             <p>
+            <!--TODO: Fill with apropiate description-->
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere cum sit aut quos quia temporibus officia veniam, ducimus esse non. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, obcaecati.
             </p>
         </div>

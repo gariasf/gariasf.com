@@ -3,7 +3,11 @@
         <a href="https://www.twitter.com/gariasf" target="_blank"><Icon iconName="twitter" /></a>
         <a href="https://www.github.com/gariasf" target="_blank"><Icon iconName="github" /></a>
         <a href="https://telegram.me/TheWaterMelonMan" target="_blank"><Icon iconName="telegram" /></a>
-        <a v-bind:href="writeEmail('link')"><p class="email-container pointer no-select"><Icon iconName="mail" /><span>{{this.$root.lang.contact.emailString}} <strong>{{writeEmail('text')}}</strong></span></p></a>
+        <a v-bind:href="writeEmail('link')">
+            <p class="email-container pointer no-select"><Icon iconName="mail" />
+                <span>{{this.$root.lang.contact.emailString}} <strong>{{writeEmail('text')}}</strong></span>
+            </p>
+        </a>
     </div>
 </template>
 
@@ -17,7 +21,10 @@
         },
         methods: {
             writeEmail: function(type){
-                { /* This obfuscates the email so it's not a plain string in the resultant html and thus make it harder to send spam by scanning the page with bots, that is, without running js to it */
+                { 
+                /* This obfuscates the email so it's not a plain string in the resultant html and thus make it harder to send spam by scanning the page with bots, 
+                /* that is, without running js to it
+                */
                 let coded = "C3GGd@JBF6Ban.Kdt";
                 let key = "gWlNSVpExKIRU4QawJ0GeDifoLqurY5PBkmOA3T6ndhHbF9Zjv1tMXcy8z2Cs7";
                 let shift=coded.length;
