@@ -5,7 +5,7 @@
         <a href="https://telegram.me/TheWaterMelonMan" target="_blank"><Icon iconName="telegram" /></a>
         <a v-bind:href="writeEmail('link')">
             <p class="email-container pointer no-select"><Icon iconName="mail" />
-                <span>{{this.$root.lang.contact.emailString}} <strong>{{writeEmail('text')}}</strong></span>
+                <span>{{this.$root.lang.footer.emailString}} <strong>{{writeEmail('text')}}</strong></span>
             </p>
         </a>
     </div>
