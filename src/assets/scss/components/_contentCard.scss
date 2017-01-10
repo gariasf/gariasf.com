@@ -13,7 +13,12 @@
     margin-top: 15px;
 }
 
+#lang-selector {
+    margin-right: auto;
+}
+
 .card-header {
+    position: relative;
     padding: 10px;
     min-height: 20px;
     color: #263238;

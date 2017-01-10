@@ -24,7 +24,7 @@
 
 <!--UI Icons-->
     <!-- Back Arrow -->
-    <svg v-else-if="iconName=='back-arrow'" :class="['svg-icon', 'pointer', 'back-arrow', {'small': isSmall == 'true'}]" viewBox="0 0 24 24">
+    <svg v-else-if="iconName=='arrow-back'" :class="['svg-icon', 'pointer', 'arrow-back', {'small': isSmall == 'true'}]" viewBox="0 0 24 24">
         <path fill="#000000" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
     </svg>
 </template>

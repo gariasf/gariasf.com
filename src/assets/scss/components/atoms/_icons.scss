@@ -11,14 +11,21 @@
     }
 }
 
+/* Init settings */
 .twitter path,
 .github path,
 .telegram path,
-.email path {
+.email path,
+.arrow-back path {
     transition: fill .2s ease-in;
     fill: $main-color;
 }
 
+.home-link{
+    margin-right: auto;
+}
+
+/* Hover settings */
 .twitter:hover path{
     fill: $twitter;
 }
