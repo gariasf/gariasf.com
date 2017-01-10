@@ -29,7 +29,7 @@ const router = new VueRouter({
             }
         ],
     },
-    /* If none of the avove matches, show 404 err */
+    /* If none of the above matches, show 404 err */
     {path: '*', component: NotFound}
   ]
 })

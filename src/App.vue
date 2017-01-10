@@ -22,6 +22,7 @@
 </script>
 
 <style lang="scss">
+    /* TODO: Import styles per component */
     /* Import App Styles */
     @import 'assets/scss/styles.scss';
 </style>

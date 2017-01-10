@@ -78,12 +78,14 @@
             height: 36px;
         }
     }
+
     .email-container {
         position: relative;
         bottom: 0;
         span {
             display: none;
         }
+        
         svg {
             display: block;
         }

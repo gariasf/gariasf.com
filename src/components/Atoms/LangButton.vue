@@ -1,5 +1,5 @@
 <template>
-    <div v-bind:class="['lang-button', 'pointer', {'active': activeLanguage == languageId}]" v-on:click="handleClick()">
+    <div :class="['lang-button', 'pointer', {'active': activeLanguage == languageId}]" v-on:click="handleClick()">
         {{this.$root.languages[languageId]}}
     </div>
 </template>
@@ -11,7 +11,7 @@
         props: ['languageId', 'activeLanguage'],
         methods: {
             handleClick: function(){
-                /* Pass the object to the parent to manage the new language to be set */
+                /* Send the button language prop to manage the new language to be set */
                 this.$root.updateLang(this.languageId);
             }
         }

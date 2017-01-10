@@ -2,6 +2,8 @@
 
 > gariasf.com webapp
 
+UI inspired by [this](https://codepen.io/kekkorider/pen/RaPWwe) codepen.
+
 ## Build Setup
 
 ``` bash
