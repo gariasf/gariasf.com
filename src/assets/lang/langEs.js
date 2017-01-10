@@ -1,4 +1,8 @@
 module.exports = {
+    header: {
+        home: 'Inicio',
+        work: 'Mi trabajo'
+    },
     intro: {
         hello: 'hola',
         world: 'mundo'

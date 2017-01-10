@@ -22,7 +22,9 @@
 
 /* Dark bg icons */
 .arrow-back path,
-.earth path {
+.earth path,
+.account path,
+.array path {
     transition: fill .2s ease-in;
     fill: lighten($main-color, 50%);
 }
