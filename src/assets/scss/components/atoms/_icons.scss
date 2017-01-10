@@ -15,10 +15,13 @@
 .twitter path,
 .github path,
 .telegram path,
-.email path,
-.arrow-back path {
+.email path {
     transition: fill .2s ease-in;
     fill: $main-color;
+}
+
+.arrow-back path {
+    fill: lighten($main-color, 50%);
 }
 
 .home-link{
