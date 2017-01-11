@@ -1,5 +1,5 @@
 <template>
-    <div class="lang-button pointer" v-on:click="handleClick()">
+    <div class="lang-button pointer" v-on:click="handleClick">
         {{this.$root.languages[languageId]}}&nbsp;<span v-if="activeLanguage == languageId">{{this.$root.lang.misc.active}}</span>
     </div>
 </template>
@@ -8,11 +8,13 @@
     export default {
         name: 'lang-button',
         components: {},
-        props: ['languageId', 'activeLanguage'],
+        props: ['languageId', 'activeLanguage', 'handleMenu'],
         methods: {
             handleClick: function(){
                 /* Send the button language prop to manage the new language to be set */
                 this.$root.updateLang(this.languageId);
+
+                this.handleMenu();
             }
         }
     }

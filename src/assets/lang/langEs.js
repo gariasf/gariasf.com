@@ -8,7 +8,9 @@ module.exports = {
     intro: {
         hello: 'hola',
         world: 'mundo',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere cum sit aut quos quia temporibus officia veniam, ducimus esse non. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, obcaecati.'
+        desc: `Hola, soy Guillem!
+                <br><br>
+                Me especializo en desarrollo Front-End, creo y diseño interfaces web basadas en guias de estilos modernas como Material Design y mi estilo es puramente minimalista.`
     },
     /* Footer and social components */
     footer: {

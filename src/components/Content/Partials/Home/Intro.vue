@@ -7,7 +7,7 @@
         <div id="intro-description">
             <p>
             <!--TODO: Fill with apropiate description-->
-            {{this.$root.lang.intro.desc}}
+            <p v-html="this.$root.lang.intro.desc"></p>
             </p>
         </div>
     </div>
