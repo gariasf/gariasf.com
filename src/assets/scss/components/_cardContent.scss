@@ -2,7 +2,7 @@
     display: inline-block;
     border-radius: 2px;
     max-width: 600px;
-    overflow: hidden;
+    width: 100%;
     text-transform: capitalize;
     font-weight: 300;
     @include box_shadow(3);
@@ -10,4 +10,12 @@
 
 #content {
     padding: 15px;
+    height: 275px;
+    overflow: auto;
+}
+
+@media (min-width:$break-sm) {
+    #content-card {
+        height: 355px;
+    }
 }

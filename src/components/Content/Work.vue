@@ -1,12 +1,16 @@
 <template>
     <div id="work" class="flex">
-        <!-- TODO: Create! -->
+        <WorkGrid />
     </div>
 </template>
 
 <script>
+    import WorkGrid from './Partials/Work/WorkGrid.vue'
+
     export default {
         name: 'work',
-        components: {}
+        components: {
+            WorkGrid
+        }
     }
 </script>

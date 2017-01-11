@@ -11,6 +11,18 @@
     }
 }
 
+.tile-icon {
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+    &.small {
+        width: 28px!important;
+        height: 28px!important;
+        margin: 0!important;
+        vertical-align: bottom!important;
+    }
+}
+
 /* Light bg icons */
 .twitter path,
 .github path,

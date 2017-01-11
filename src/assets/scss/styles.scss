@@ -29,9 +29,11 @@ $break-ll: 80.063em; /* hi-res laptops and desktops */
 @import 'components/atoms/largeButton';
 @import 'components/atoms/icons';
 @import 'components/atoms/languageButton';
+@import 'components/atoms/tile';
 
 /* Component Styles */
 @import 'components/cardContent';
 @import 'components/cardHeader';
 @import 'components/footer';
 @import 'components/content/home';
+@import 'components/content/work';
