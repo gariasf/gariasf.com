@@ -11,15 +11,14 @@
     }
 }
 
-.tile-icon {
-    width: 36px;
-    height: 36px;
+.list-icon {
+    width: 24px;
+    height: 24px;
     vertical-align: middle;
-    &.small {
-        width: 28px!important;
-        height: 28px!important;
-        margin: 0!important;
-        vertical-align: bottom!important;
+    &.menu-down {
+        padding: 0 15px;
+        position: absolute;
+        right: 0;
     }
 }
 
@@ -27,7 +26,9 @@
 .twitter path,
 .github path,
 .telegram path,
-.email path {
+.email path, 
+.link path,
+.menu-down path {
     transition: fill .2s ease-in;
     fill: $main-color;
 }
