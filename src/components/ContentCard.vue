@@ -1,10 +1,12 @@
 <template>
     <div id="content-card">
         <AppHeader />
-        <div id="content" class="flex">
-            <!-- vue-router will place a component here -->
-            <router-view></router-view>
-        </div>
+            <div id="content" class="flex">
+                <transition :name="($route.path == '/work') ? 'slide-from-right' : 'slide-from-left'">
+                    <!-- vue-router will place a component here -->
+                    <router-view></router-view>
+                </transition>
+            </div>
     </div>
 </template>
 

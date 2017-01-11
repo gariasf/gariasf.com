@@ -21,6 +21,8 @@ $break-ll: 80.063em; /* hi-res laptops and desktops */
 @import 'lib/reset';
 @import 'lib/fonts';
 @import 'lib/utils';
+@import 'lib/tooltip';
+@import 'lib/transitions';
 
 /* General App Style */
 @import 'app';
@@ -30,7 +32,6 @@ $break-ll: 80.063em; /* hi-res laptops and desktops */
 @import 'components/atoms/icons';
 @import 'components/atoms/languageButton';
 @import 'components/atoms/listItem';
-@import 'components/../lib/tooltip';
 
 /* Component Styles */
 @import 'components/cardContent';

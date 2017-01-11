@@ -8,7 +8,10 @@
     left: 0;
     width: calc(100% - 20px);
     @include box_shadow(2);
-    z-index: 30;
+}
+
+#language-list {
+    z-index: 10;
 }
 
 #content-title {
@@ -22,6 +25,7 @@
 }
 
 .card-header {
+    z-index: 30;
     height: 30px;
     border-radius: 2px 2px 0 0;
     background-color: $header-bg;

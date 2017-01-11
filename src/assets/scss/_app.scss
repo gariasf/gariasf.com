@@ -4,6 +4,10 @@
 /* }
 **/
 
+body, html {
+    overflow-X: hidden;
+}
+
 #app {
     min-height: 100vh;
 }
