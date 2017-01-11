@@ -1,5 +1,5 @@
 <template>
-    <div id="lang-selector" class="flex no-select" v-on-clickaway.prevent="handleClickAway">
+    <div id="lang-selector" class="flex no-select" v-on-clickaway.prevent="handleClickAway" v-tooltip.left-middle="this.$root.lang.tooltip.languageMenu">
         <a v-on:click.prevent="handleClick()"><Icon name="earth" pointer="true" /></a>
         <div v-if="this.listActive" id="language-list">
             <LangButton languageId=0 :activeLanguage=this.$root.activeLanguage />
@@ -28,7 +28,7 @@
         mixins: [ clickaway ],
         data: function() {
             return {
-                listActive: false
+                listActive: false,
             }
         },
         methods: {

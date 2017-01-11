@@ -15,7 +15,12 @@ module.exports = {
         name: 'Guillem Arias',
         emailString: 'Contact me at'
     },
-     /* Miscelaneous */
+    /* Tooltip messages */
+    tooltip: {
+        githubSrc: 'View source code',
+        languageMenu: 'Change languge'
+    },
+    /* Miscelaneous */
     misc: {
         workButton: 'My Work',
         active: 'Active'

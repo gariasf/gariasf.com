@@ -1,0 +1,25 @@
+.tooltip {
+  display: none;
+  opacity: 0;
+  transition: opacity .15s;
+  pointer-events: none;
+  padding: 6px;
+  z-index: 10000;
+
+  .tooltip-content {
+    background: transparentize(darken($header-bg, 15%), .1%);
+    color: white;
+    border-radius: 2px;
+    padding: 5px 10px 4px;
+    font-weight: 300;
+    font-size: .9em;
+  }
+
+  &.tooltip-open-transitionend {
+    display: block;
+  }
+
+  &.tooltip-after-open {
+    opacity: 1;
+  }
+}
