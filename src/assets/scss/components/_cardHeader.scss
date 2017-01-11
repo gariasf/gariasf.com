@@ -8,12 +8,17 @@
     left: 0;
     width: calc(100% - 20px);
     @include box_shadow(2);
+    z-index: 30;
 }
 
 #content-title {
     font-size: .8em;
     display: inline-flex;
     margin-right: auto;
+    text-transform: initial;
+    span {
+        white-space: nowrap;
+    }
 }
 
 .card-header {

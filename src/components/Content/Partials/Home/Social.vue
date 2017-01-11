@@ -24,6 +24,7 @@
                 { 
                 /* This obfuscates the email so it's not a plain string in the resultant html and thus make it harder to send spam by scanning the page with bots, 
                 /* that is, without running js to it
+                /* I'm starting to think this is stupid, we are not in plain html, but I'll leave it here anyway.
                 */
                 let coded = "C3GGd@JBF6Ban.Kdt";
                 let key = "gWlNSVpExKIRU4QawJ0GeDifoLqurY5PBkmOA3T6ndhHbF9Zjv1tMXcy8z2Cs7";

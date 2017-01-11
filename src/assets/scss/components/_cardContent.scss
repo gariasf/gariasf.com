@@ -10,11 +10,9 @@
 
 #content {
     padding: 15px;
-    height: 275px;
-    overflow: auto;
 }
 
-@media (min-width:$break-sm) {
+@media (min-width: $break-sm) {
     #content-card {
         height: 355px;
     }

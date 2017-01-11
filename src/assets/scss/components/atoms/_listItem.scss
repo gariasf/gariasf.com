@@ -4,9 +4,11 @@
     width: calc(100% - 30px);
     padding: 15px;
     color: lighten($main-color, 5%);
+    
     &:not(:last-of-type){
         border-bottom: 1px solid transparentize($main-color, .8);
     }
+
     span {
         text-transform: capitalize;
         color: $main-color;
