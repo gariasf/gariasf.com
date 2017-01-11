@@ -10,15 +10,12 @@
     @include box_shadow(2);
 }
 
-#language-list {
-    z-index: 10;
-}
-
 #content-title {
     font-size: .8em;
     display: inline-flex;
     margin-right: auto;
     text-transform: initial;
+
     span {
         white-space: nowrap;
     }

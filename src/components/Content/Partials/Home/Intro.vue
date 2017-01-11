@@ -5,10 +5,7 @@
             {{this.$root.lang.intro.world}}.
         </div>
         <div id="intro-description">
-            <p>
-            <!--TODO: Fill with apropiate description-->
             <p v-html="this.$root.lang.intro.desc"></p>
-            </p>
         </div>
     </div>
 </template>

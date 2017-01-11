@@ -14,6 +14,7 @@
                 /* Send the button language prop to manage the new language to be set */
                 this.$root.updateLang(this.languageId);
 
+                /* Close the menu if a language is selected (call parent function) */
                 this.handleMenu();
             }
         }

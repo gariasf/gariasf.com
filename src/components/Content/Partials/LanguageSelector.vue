@@ -2,11 +2,11 @@
     <div id="lang-selector" class="flex no-select" v-on-clickaway.prevent="handleClickAway" v-tooltip.left-middle="this.$root.lang.tooltip.languageMenu">
         <a v-on:click.prevent="handleClick()"><Icon name="earth" pointer="true" /></a>
         <transition name="translate">
-        <div v-if="this.listActive" id="language-list">
-            <LangButton languageId=0 :activeLanguage=this.$root.activeLanguage :handleMenu="handleClick" />
-            <LangButton languageId=1 :activeLanguage=this.$root.activeLanguage :handleMenu="handleClick" />
-            <LangButton languageId=2 :activeLanguage=this.$root.activeLanguage :handleMenu="handleClick" />
-        </div>
+            <div v-if="this.listActive" id="language-list">
+                <LangButton languageId=0 :activeLanguage=this.$root.activeLanguage :handleMenu="handleClick" />
+                <LangButton languageId=1 :activeLanguage=this.$root.activeLanguage :handleMenu="handleClick" />
+                <LangButton languageId=2 :activeLanguage=this.$root.activeLanguage :handleMenu="handleClick" />
+            </div>
         </transition>
     </div>
 </template>
