@@ -37,3 +37,9 @@
         border-radius: 0px;
     }
 }
+
+@media (max-height: 420px) {
+    .card-header {
+        border-radius: 0px;
+    }
+}
