@@ -23,3 +23,11 @@
         opacity: 1;
     }
 }
+
+@media (max-width: $break-sm) {
+    .tooltip {
+        display: none!important;
+        opacity: 0!important;
+        visibility: none!important;
+    }
+}

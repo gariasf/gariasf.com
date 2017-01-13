@@ -24,7 +24,24 @@
 }
 
 @media (max-width: $break-sm) {
-    #content {
-        min-height: 440px;
+    #content-card {
+        position: absolute;
+        border-radius: 0px;
+    }
+
+    #content, #content-card {
+        height: 100%;
+    }
+}
+
+@media (max-height: 420px) {
+    #content-card {
+        border-radius: 0px;
+        max-width: none;
+    }
+
+    #content, #content-card {
+        position: absolute;
+        height: 100%;
     }
 }

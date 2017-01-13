@@ -3,7 +3,7 @@
         text-align: center;
         font-size: .85em;
     }
-    
+    min-width: 155px;
     white-space: nowrap;
     padding: 8px 32px;
     @include box_shadow(2);

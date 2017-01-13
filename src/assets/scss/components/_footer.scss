@@ -7,3 +7,16 @@
         text-align: center;
     }
 }
+
+@media (max-width: $break-sm) {
+    #footer {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media (max-height: 420px) {
+    #footer {
+        display: none;
+    }
+}

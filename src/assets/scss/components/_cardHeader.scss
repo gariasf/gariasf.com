@@ -32,3 +32,8 @@
     color: $header-color;
 }
 
+@media (max-width: $break-sm) {
+    .card-header {
+        border-radius: 0px;
+    }
+}
