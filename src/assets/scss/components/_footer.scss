@@ -1,11 +1,16 @@
 #footer {
     margin: 15px;
     font-size: .85em;
-    color: $main-color;
+    color: #f5f5f5;
+    z-index: 5;
     
     p {
         text-align: center;
     }
+
+        path {
+            fill: #f5f5f5!important;
+        }
 }
 
 @media (max-width: $break-sm) {

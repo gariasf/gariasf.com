@@ -6,10 +6,20 @@
 
 body, html {
     overflow-X: hidden;
+    background-attachment:fixed;
+    background: radial-gradient(ellipse at bottom, #1C2837 0%, #050608 100%);
 }
 
 #app {
     min-height: 100vh;
+}
+
+#solar-syst {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 /* Things have to look good man, anything smaller than 300px is just too small. */
