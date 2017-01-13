@@ -33,6 +33,7 @@
 .email path, 
 .link path,
 .menu-down path {
+    -webkit-transition: fill .2s ease-in;
     transition: fill .2s ease-in;
     fill: $main-color;
 }
@@ -42,6 +43,7 @@
 .earth path,
 .account path,
 .array path {
+    -webkit-transition: fill .2s ease-in;
     transition: fill .2s ease-in;
     fill: lighten($main-color, 50%);
 }

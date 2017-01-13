@@ -15,6 +15,7 @@
 }
 
 #content, #content-card {
+    -webkit-transition: all .5s ease;
     transition: all .5s ease;
 }
 
@@ -29,6 +30,8 @@
     #content-card {
         position: absolute;
         border-radius: 0px;
+        top: 0;
+        left: 0;
     }
 
     #content, #content-card {
@@ -40,6 +43,8 @@
     #content-card {
         border-radius: 0px;
         max-width: none;
+        top: 0;
+        left: 0;
     }
 
     #content, #content-card {

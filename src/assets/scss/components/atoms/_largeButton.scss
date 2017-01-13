@@ -11,6 +11,7 @@
     background-color: $accent-color;
     color: #fff;
     border-radius: 2px;
+    -webkit-transition: box-shadow .2s ease;
     transition: box-shadow .2s ease;
     
     &:hover {

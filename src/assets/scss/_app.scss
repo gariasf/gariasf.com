@@ -7,6 +7,7 @@
 body, html {
     overflow-X: hidden;
     background-attachment:fixed;
+    background: -webkit-radial-gradient(bottom ellipse, #1C2837 0%, #050608 100%);
     background: radial-gradient(ellipse at bottom, #1C2837 0%, #050608 100%); /* This is for the solar system to look good */
 }
 
@@ -32,6 +33,8 @@ body, html {
 /* Show the overlay and hide anything else to reduce impact in case of viewport<300px */
 @media (max-width:300px) {
     #sm_overlay {
+        display: -webkit-box!important;
+        display: -ms-flexbox!important;
         display: flex!important;
     }
     

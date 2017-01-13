@@ -16,7 +16,7 @@
   Pluto : ~90 580 days (~248 years)
 */
 
-$year-in-second : 30; // 1 Earth year = 30 sec
+$year-in-second : 30; /* 1 Earth year = 30 sec*/
 
 @function revolution($pl-year-in-days){
     @return $pl-year-in-days * $year-in-second / 365.2563 + s  //Earth reference
@@ -91,6 +91,7 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
 }
 
 .sun {
+    background:-webkit-radial-gradient(center ellipse, #ffd000 1%,#f9b700 39%,#f9b700 39%,#e06317 100%);
     background:radial-gradient(ellipse at center, #ffd000 1%,#f9b700 39%,#f9b700 39%,#e06317 100%);
     height:$sun;
     width:$sun;
@@ -108,7 +109,8 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
     width: $mercury-orb;
     margin-top: -$mercury-orb / 2;
     margin-left: -$mercury-orb / 2;
-    animation: orb revolution(87.5) linear infinite;
+    -webkit-animation: orb revolution(87.5) linear infinite;
+            animation: orb revolution(87.5) linear infinite;
 
     &:before {
         height:$mercury-pl;
@@ -124,7 +126,8 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
     width: $venus-orb;
     margin-top: -$venus-orb / 2;
     margin-left: -$venus-orb / 2;
-    animation: orb revolution(224.7) linear infinite;
+    -webkit-animation: orb revolution(224.7) linear infinite;
+            animation: orb revolution(224.7) linear infinite;
 
     &:before {
         height:$venus-pl;
@@ -140,7 +143,8 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
     width: $earth-orb;
     margin-top: -$earth-orb / 2;
     margin-left: -$earth-orb / 2;
-    animation: orb revolution(365.2563) linear infinite;
+    -webkit-animation: orb revolution(365.2563) linear infinite;
+            animation: orb revolution(365.2563) linear infinite;
 
     &:before {
         height:$earth-pl;
@@ -161,7 +165,8 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
         margin-top: -9px;
         border-radius: 100px;
         box-shadow: 0 -10px 0 -8px grey;
-        animation: orb revolution(27.3216) linear infinite;
+        -webkit-animation: orb revolution(27.3216) linear infinite;
+                animation: orb revolution(27.3216) linear infinite;
     }
 }
 
@@ -170,7 +175,8 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
     width: $mars-orb;
     margin-top: -$mars-orb / 2;
     margin-left: -$mars-orb / 2;
-    animation: orb revolution(687) linear infinite;
+    -webkit-animation: orb revolution(687) linear infinite;
+            animation: orb revolution(687) linear infinite;
 
     &:before {
         height:$mars-pl;
@@ -186,7 +192,8 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
     width: $jupiter-orb;
     margin-top: -$jupiter-orb / 2;
     margin-left: -$jupiter-orb / 2;
-    animation: orb revolution(4331) linear infinite;
+    -webkit-animation: orb revolution(4331) linear infinite;
+            animation: orb revolution(4331) linear infinite;
 
     &:before {
         height:$jupiter-pl;
@@ -201,7 +208,8 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
     width: $saturn-orb;
     margin-top: -$saturn-orb / 2;
     margin-left: -$saturn-orb / 2;
-    animation: orb revolution(10747) linear infinite;
+    -webkit-animation: orb revolution(10747) linear infinite;
+            animation: orb revolution(10747) linear infinite;
 
     &:before {
         height:$saturn-pl;
@@ -218,14 +226,18 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
         width: 4.676%;
         left: 50%;
         top: 0px;
-        transform: rotateZ(-52deg);
+        -webkit-transform: rotateZ(-52deg);
+                transform: rotateZ(-52deg);
         margin-left: -2.3%;
         margin-top: -1.2%;
         border-radius: 50% 50% 50% 50%;
         box-shadow: 0 1px 0 1px #987641, 3px 1px 0 #987641, -3px 1px 0 #987641;
-        animation: orb revolution(10747) linear infinite;
-        animation-direction: reverse; // compensate to reverse main orbit animation
-        transform-origin: 52% 60%;
+        -webkit-animation: orb revolution(10747) linear infinite;
+                animation: orb revolution(10747) linear infinite;
+        -webkit-animation-direction: reverse;
+                animation-direction: reverse; /* compensate to reverse main orbit animation*/
+        -webkit-transform-origin: 52% 60%;
+                transform-origin: 52% 60%;
     }
 }
 
@@ -234,7 +246,8 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
     width: $uranus-orb;
     margin-top: -$uranus-orb / 2;
     margin-left: -$uranus-orb / 2;
-    animation: orb revolution(30589) linear infinite;
+    -webkit-animation: orb revolution(30589) linear infinite;
+            animation: orb revolution(30589) linear infinite;
 
     &:before {
         height:$uranus-pl;
@@ -250,7 +263,8 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
     width: $neptune-orb;
     margin-top: -$neptune-orb / 2;
     margin-left: -$neptune-orb / 2;
-    animation: orb revolution(59802) linear infinite;
+    -webkit-animation: orb revolution(59802) linear infinite;
+            animation: orb revolution(59802) linear infinite;
 
     &:before {
         height:$neptune-pl;
@@ -268,7 +282,8 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
     width: $asteroids-belt-orb;
     margin-top: -$asteroids-belt-orb / 2;
     margin-left: -$asteroids-belt-orb / 2;
-    animation: orb revolution(2191) linear infinite;
+    -webkit-animation: orb revolution(2191) linear infinite;
+            animation: orb revolution(2191) linear infinite;
     overflow:hidden;
 
     &:before {
@@ -288,7 +303,8 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
     width: $pluto-orb;
     margin-top: -$pluto-orb / 2 + -60;
     margin-left: -$pluto-orb / 2 + 70;
-    animation: orb revolution(90580) linear infinite;
+    -webkit-animation: orb revolution(90580) linear infinite;
+            animation: orb revolution(90580) linear infinite;
     &:before {
         height:$pluto-pl;
         width:$pluto-pl;
@@ -298,11 +314,24 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
     }
 }
 
-@keyframes orb {
+@-webkit-keyframes orb {
     from {
-        transform:rotate(0deg)
+        -webkit-transform:rotate(0deg);
+                transform:rotate(0deg)
     }
     to{
-        transform:rotate(-360deg)
+        -webkit-transform:rotate(-360deg);
+                transform:rotate(-360deg)
+    }
+}
+
+@keyframes orb {
+    from {
+        -webkit-transform:rotate(0deg);
+                transform:rotate(0deg)
+    }
+    to{
+        -webkit-transform:rotate(-360deg);
+                transform:rotate(-360deg)
     }
 }
