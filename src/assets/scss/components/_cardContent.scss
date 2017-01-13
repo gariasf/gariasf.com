@@ -18,6 +18,7 @@
     transition: all .5s ease;
 }
 
+/* Media queries */
 @media (min-width: $break-sm) {
     #content-card {
         min-height: 366px;

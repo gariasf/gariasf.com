@@ -23,7 +23,6 @@
                 /* Remove special chars */
                 let trimmedPath = /\w+/.exec(this.$route.path);
 
-                
                 if(trimmedPath == null){ /* If if we are at root path, we are home :) */
                     return 'account';
                 } else if(trimmedPath[0] == 'work'){
@@ -34,7 +33,6 @@
                  /* Remove special chars */
                 let trimmedPath = /\w+/.exec(this.$route.path);
 
-                
                 if(trimmedPath == null){ /* If if we are at root path, we are home :) */
                     return this.$root.lang.header.home;
                 } else if(trimmedPath[0] == 'work'){

@@ -23,10 +23,10 @@ $break-ll: 80.063em; /* hi-res laptops and desktops */
 @import 'lib/utils';
 @import 'lib/tooltip';
 @import 'lib/transitions';
+@import 'lib/solar-sys';
 
 /* General App Style */
 @import 'app';
-@import 'lib/solar-sys';
 
 /* UI Components */
 @import 'components/atoms/largeButton';

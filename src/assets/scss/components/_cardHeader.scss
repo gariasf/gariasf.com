@@ -32,6 +32,7 @@
     color: $header-color;
 }
 
+/* Media queries */
 @media (max-width: $break-sm) {
     .card-header {
         border-radius: 0px;

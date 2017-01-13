@@ -3,7 +3,7 @@
         <ContentCard />
         <AppFooter />
         <SmOverlay />
-    </div>  
+    </div>
 </template>
 
 <script>
