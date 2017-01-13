@@ -6,7 +6,7 @@
     padding: 10px;
     right: 0;
     left: 0;
-    width: calc(100% - 20px);
+    width: 100%;
     @include box_shadow(2);
 }
 
@@ -23,7 +23,7 @@
 
 .card-header {
     z-index: 30;
-    height: 30px;
+    height: 50px;
     border-radius: 2px 2px 0 0;
     background-color: $header-bg;
     position: relative;
