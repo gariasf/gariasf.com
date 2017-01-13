@@ -1,7 +1,7 @@
 <template>
     <div id="profile" class="flex flex-dc flex-full-center no-select">
         <div id="image" class="m-auto">
-            <img src="../../../../assets/img/sample-profile.png" alt="" class="img-responsive">
+            <img src="../../../../assets/img/profile.png" alt="" class="img-responsive">
         </div>
         <router-link to="work"><LargeButton :buttonText=this.$root.lang.misc.workButton /></router-link>
     </div>
