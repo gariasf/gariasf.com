@@ -12,7 +12,8 @@
     "v-tooltip": "^1.0.5",
     "vue": "^2.1.0",
     "vue-clickaway": "^2.1.0",
-    "vue-router": "^2.1.1"
+    "vue-router": "^2.1.1",
+    "vue-touch-ripple": "^2.3.2"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",

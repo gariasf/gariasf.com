@@ -1,5 +1,5 @@
 <template>
-    <div class="lang-button pointer" v-on:click="handleClick">
+    <div class="lang-button pointer" v-on:click="handleClick" v-touch-ripple>
         {{this.$root.languages[languageId]}}&nbsp;<span v-if="activeLanguage == languageId">{{this.$root.lang.misc.active}}</span>
     </div>
 </template>

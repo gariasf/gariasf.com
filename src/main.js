@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VTooltip from 'v-tooltip'
+import VueTouchRipple from 'vue-touch-ripple'
 import App from './App.vue'
 import NotFound from './components/NotFound.vue'
 
@@ -15,6 +16,7 @@ import Work from './components/Content/Work.vue'
 
 Vue.use(VueRouter)
 Vue.use(VTooltip)
+Vue.use(VueTouchRipple)
 
 const router = new VueRouter({
     mode: 'history',

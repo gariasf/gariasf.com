@@ -1,9 +1,9 @@
 <template>
     <span class="list-item flex flex-main-center">
         <a :href="url" target="_blank">
-            <Icon name="link" />&nbsp;<span>{{title}}</span>
+            <Icon name="link" />&nbsp;<span v-touch-ripple>{{title}}</span>
         </a>
-        <Icon name="menu-down" />
+        <Icon name="menu-down" pointer="true" />
     </span>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="large-button pointer">
+    <div class="large-button pointer" v-touch-ripple>
         <p>{{buttonText}}</p>
     </div>
 </template>
