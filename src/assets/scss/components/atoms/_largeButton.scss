@@ -11,10 +11,27 @@
     background-color: $accent-color;
     color: #fff;
     border-radius: 2px;
-    -webkit-transition: box-shadow .2s ease;
-    transition: box-shadow .2s ease;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
     
     &:hover {
         @include box_shadow(3);
+    }
+
+    &.inline {
+        display: inline-block;
+        padding: 4px 12px;
+        min-width: 5px;
+        p {
+            font-size: .9em!important;
+        }
+    }
+
+    &.transparent {
+        background: transparentize(lighten($main-color, 50%), .9);
+
+        &:hover {
+            background: transparentize(lighten($main-color, 50%), .8);
+        }
     }
 }

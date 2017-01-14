@@ -20,6 +20,16 @@
     vertical-align: middle;
 }
 
+/* The not found icon */
+.not-found {
+    vertical-align: bottom;
+    width: 32px;
+    height: 32px;
+    path {
+        fill: #fff;
+    }
+}
+
 /* Light bg icons */
 .twitter path,
 .github path,
