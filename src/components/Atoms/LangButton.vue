@@ -5,9 +5,13 @@
 </template>
 
 <script>
+    import Icon from './Icons.vue'
+
     export default {
         name: 'lang-button',
-        components: {},
+        components: {
+            Icon
+        },
         props: ['languageId', 'activeLanguage', 'handleMenu'],
         methods: {
             handleClick: function(){

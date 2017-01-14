@@ -52,6 +52,7 @@
     <svg v-else-if="name=='menu-down'" :class="['list-icon', {'pointer': pointer == 'true'}, 'menu-down', {'small': isSmall == 'true'}]" viewBox="0 0 24 24">
         <path fill="#000000" d="M7,10L12,15L17,10H7Z" />
     </svg>
+
 </template>
 
 <script>

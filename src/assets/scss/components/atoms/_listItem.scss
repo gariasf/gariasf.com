@@ -17,4 +17,18 @@
         background: darken(#fff, 5%);
         font-size: .9em;
     }
+
+    .view-more-link {
+        margin: 0 5px;
+        position: absolute;
+        right: 0;
+        padding: 8px;
+        border-radius: 50%;
+        top: calc(50% - 16px);
+        transition: all .5s ease;
+
+        &:hover {
+             background: transparentize(darken($main-color, .2%), .85);
+        }
+    }
 }
