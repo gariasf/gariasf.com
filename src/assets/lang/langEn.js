@@ -22,6 +22,12 @@ module.exports = {
         githubSrc: 'View source code',
         languageMenu: 'Change languge'
     },
+    /* The Not Found page */
+    notFound: {
+        wtf: 'Whoa, what have you done?!',
+        help: 'I think you got lost, but don\'t worry, you can go',
+        homeLink: 'Back Home'
+    },
     /* Miscelaneous */
     misc: {
         workButton: 'My Work',

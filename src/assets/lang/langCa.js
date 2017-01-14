@@ -22,6 +22,12 @@ module.exports = {
         githubSrc: 'Veure codi font',
         languageMenu: 'Canviar idioma'
     },
+    /* The Not Found page */
+    notFound: {
+        wtf: 'Eii, que has fet?!',
+        help: 'Em sembla que t\'has perdut, però no et preocupis, pots',
+        homeLink: 'Tornar a l\'inici'
+    },
     /* Miscelaneous */
     misc: {
         workButton: 'La meva feina',
