@@ -24,8 +24,8 @@ module.exports = {
     },
     /* The Not Found page */
     notFound: {
-        wtf: 'Whoa, what have you done?!',
-        help: 'I think you got lost, but don\'t worry, you can go',
+        wtf: 'Houston, we have a problem!',
+        help: 'You probably got lost, but don\'t worry, you can go',
         homeLink: 'Back Home'
     },
     /* Miscelaneous */

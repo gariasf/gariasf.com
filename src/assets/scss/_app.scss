@@ -1,8 +1,9 @@
-/** Box outline for dev purposes */
-/* * {
-/*    outline: 1px solid red;
-/* }
-**/
+
+ * {
+     outline: none;
+    // outline: 1px solid red; /*  Box outline for dev purposes */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ }
 
 body, html {
     overflow-X: hidden;
@@ -48,7 +49,7 @@ body, html {
     position: absolute;
     background: #fff;
     
-    p{
+    p {
         padding: 10px;
         font-size: .9em;
     }
