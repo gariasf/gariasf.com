@@ -14,6 +14,7 @@ body, html {
 
 #app {
     min-height: 100vh;
+    transition: all .4s ease-in-out;
 }
 
 #not-found {
@@ -80,4 +81,20 @@ body, html {
     #content-card {
         display: none!important;
     }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 2px;
+    position: absolute;
+}
+ 
+::-webkit-scrollbar-track {
+    box-shadow: none;
+    border-radius: none;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background-color: rgba(0,0,0, .2);
 }

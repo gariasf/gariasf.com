@@ -3,7 +3,7 @@
         <a :href="url" target="_blank">
             <Icon name="link" />&nbsp;<span>{{title}}</span>
         </a>
-        <a href="#!" class="view-more-link"><Icon name="menu-down" /></a>
+        <a href="#!" class="view-more-link"><Icon name="details" /></a>
     </span>
 </template>
 

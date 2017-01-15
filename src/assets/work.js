@@ -12,7 +12,7 @@ module.exports = {
     ytsync: {
         name: 'ytsync',
         title: 'YTSync',
-        url: ''
+        url: 'https://ytsync.nethruster.com/'
     },
     bytetime: {
         name: 'bytetime',

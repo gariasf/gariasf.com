@@ -48,9 +48,9 @@
         <path fill="#000000" d="M16,6H13V7.9H16C18.26,7.9 20.1,9.73 20.1,12A4.1,4.1 0 0,1 16,16.1H13V18H16A6,6 0 0,0 22,12C22,8.68 19.31,6 16,6M3.9,12C3.9,9.73 5.74,7.9 8,7.9H11V6H8A6,6 0 0,0 2,12A6,6 0 0,0 8,18H11V16.1H8C5.74,16.1 3.9,14.26 3.9,12M8,13H16V11H8V13Z" />
     </svg>
 
-    <!-- Menu Down -->
-    <svg v-else-if="name=='menu-down'" :class="['list-icon', {'pointer': pointer == 'true'}, 'menu-down', {'small': isSmall == 'true'}]" viewBox="0 0 24 24">
-        <path fill="#000000" d="M7,10L12,15L17,10H7Z" />
+    <!-- Details -->
+    <svg v-else-if="name=='details'" :class="['list-icon', {'pointer': pointer == 'true'}, 'details', {'small': isSmall == 'true'}]" viewBox="0 0 24 24">
+        <path fill="#000000" d="M2,3H22C23.05,3 24,3.95 24,5V19C24,20.05 23.05,21 22,21H2C0.95,21 0,20.05 0,19V5C0,3.95 0.95,3 2,3M14,6V7H22V6H14M14,8V9H21.5L22,9V8H14M14,10V11H21V10H14M8,13.91C6,13.91 2,15 2,17V18H14V17C14,15 10,13.91 8,13.91M8,6A3,3 0 0,0 5,9A3,3 0 0,0 8,12A3,3 0 0,0 11,9A3,3 0 0,0 8,6Z" />
     </svg>
 
     <!-- Not Found -->

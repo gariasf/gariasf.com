@@ -51,11 +51,11 @@ new Vue({
             this.lang = en;
             router.push({ path: '/en' + this.$route.path });
         }
-        else if(this.$route.params.lang == "en"){ /* Else calculate which language to choose depending on the url param */
+        else if(this.$route.params.lang == "en") { /* Else calculate which language to choose depending on the url param */
             this.lang = en
-        } else if (this.$route.params.lang == "ca"){
+        } else if (this.$route.params.lang == "ca") {
             this.lang = ca
-        } else if(this.$route.params.lang == "es"){
+        } else if(this.$route.params.lang == "es") {
             this.lang = es
         }
     },
