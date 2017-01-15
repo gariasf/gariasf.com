@@ -1,3 +1,26 @@
 #work, #work-list {
     width: 100%;
 }
+
+#work-list {
+    padding: 0 0 15px 0;
+}
+
+.list-container {
+    overflow: overlay;
+    max-height: 94%;
+    padding: 0 15px;
+}
+
+.filter-tool {
+    border-radius: 2px;
+    padding: 5px;
+    font-size: .78em;
+    justify-content: flex-end;
+    min-height: 26px;
+    @include box_shadow(1);
+
+    .filter-type {
+        margin: 0 10px;
+    }
+}

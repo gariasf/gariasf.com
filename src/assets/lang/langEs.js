@@ -31,6 +31,8 @@ module.exports = {
      /* Miscelaneous */
     misc: {
         workButton: 'Mi trabajo',
-        active: 'Activo'
+        active: 'Activo',
+        all: 'Todo',
+        client: 'Cliente'
     }
 }

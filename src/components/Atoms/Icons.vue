@@ -57,6 +57,16 @@
     <svg v-else-if="name=='not-found'" :class="['list-icon', {'pointer': pointer == 'true'}, 'not-found', {'small': isSmall == 'true'}]" viewBox="0 0 24 24">
         <path fill="#000000" d="M10,4L12,6H20A2,2 0 0,1 22,8V18A2,2 0 0,1 20,20H4C2.89,20 2,19.1 2,18V6C2,4.89 2.89,4 4,4H10M12.46,10.88L14.59,13L12.46,15.12L13.88,16.54L16,14.41L18.12,16.54L19.54,15.12L17.41,13L19.54,10.88L18.12,9.46L16,11.59L13.88,9.46L12.46,10.88Z" />
     </svg>
+
+    <!-- Checkbox Empty -->
+    <svg v-else-if="name=='ch-empty'" class="svg-icon filter-ch" viewBox="0 0 24 24">
+        <path fill="#000000" d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z" />
+    </svg>
+
+     <!-- Checkbox Checked -->
+    <svg v-else-if="name=='ch-ch'" class="svg-icon filter-ch" viewBox="0 0 24 24">
+        <path fill="#000000" d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z" />
+    </svg>
 </template>
 
 <script>

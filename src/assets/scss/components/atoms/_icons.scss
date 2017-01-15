@@ -36,7 +36,8 @@
 .telegram path,
 .email path, 
 .link path,
-.details path {
+.details path,
+.filter-ch path {
     -webkit-transition: fill .2s ease-in;
     transition: fill .2s ease-in;
     fill: $main-color;
@@ -55,6 +56,13 @@
 .home-link{
     margin-right: auto;
 }
+
+.filter-ch {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+}
+
 
 /* Hover settings */
 .twitter:hover path{
