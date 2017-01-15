@@ -2,7 +2,7 @@
     <div id="content-card">
         <AppHeader />
             <div id="content" class="flex">
-                <transition :name="($route.path == '/work') ? 'slide-from-right' : 'slide-from-left'">
+                <transition :name="($route.meta.zone == 'work') ? 'slide-from-right' : 'slide-from-left'">
                     <!-- vue-router will place a component here -->
                     <router-view></router-view>
                 </transition>

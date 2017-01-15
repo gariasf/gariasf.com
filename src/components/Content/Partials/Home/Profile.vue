@@ -3,7 +3,7 @@
         <div id="image" class="m-auto">
             <img src="../../../../assets/img/profile.png" alt="" class="img-responsive">
         </div>
-        <router-link to="work"><LargeButton :buttonText=this.$root.lang.misc.workButton /></router-link>
+        <a v-on:click.prevent="handleWork()"><LargeButton :buttonText=this.$root.lang.misc.workButton /></a>
     </div>
 </template>
 
@@ -14,6 +14,11 @@
         name: 'profile',
         components: {
             LargeButton
+        },
+        methods: {
+            handleWork: function() {
+                this.$router.push({path:  '/' + this.$route.params.lang + '/work'});
+            }
         }
     }
 </script>

@@ -3,9 +3,9 @@
         <a v-on:click.prevent="handleClick()"><Icon name="earth" pointer="true" /></a>
         <transition name="translate">
             <div v-if="this.listActive" id="language-list">
-                <LangButton languageId=0 :activeLanguage=this.$root.activeLanguage :handleMenu="handleClick" />
-                <LangButton languageId=1 :activeLanguage=this.$root.activeLanguage :handleMenu="handleClick" />
-                <LangButton languageId=2 :activeLanguage=this.$root.activeLanguage :handleMenu="handleClick" />
+                <LangButton languageId="en" :activeLanguage=$route.params.lang :handleMenu="handleClick" />
+                <LangButton languageId="ca" :activeLanguage=$route.params.lang :handleMenu="handleClick" />
+                <LangButton languageId="es" :activeLanguage=$route.params.lang :handleMenu="handleClick" />
             </div>
         </transition>
     </div>

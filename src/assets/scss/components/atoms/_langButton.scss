@@ -2,13 +2,12 @@
     padding: 15px;
     color: lighten($main-color, 5%);
     margin: 0 5px;
-
+    text-transform: capitalize;
     &:not(:last-of-type){
         border-bottom: 1px solid transparentize($main-color, .8);
     }
     
     span {
-        text-transform: capitalize;
         color: $accent-color;
         padding: 2px 5px;
         background: darken(#fff, 5%);

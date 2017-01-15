@@ -21,15 +21,16 @@ Vue.use(VueTouchRipple)
 const router = new VueRouter({
     mode: 'history',
     routes: [
-    { path: '/', component: App,
+    { path: '/:lang(\\es|en|ca+)', component: App,
         children: [
             {
                 path: '',
-                component: Home
+                component: Home,
             },
             {
                 path: 'work',
-                component: Work
+                component: Work,
+                meta: { zone: 'work' }
             }
         ],
     },
@@ -42,24 +43,42 @@ new Vue({
     router,
     data () {
         return {
-            languages: ['En', 'Ca', 'Es'], /* Array of aviable languages to map them with their corresponding id (pos) when necessary */
-            activeLanguage: 0, /* Set the default active language */
             lang: en /* Set the default language object */
         }
     },
+    mounted () {
+        if(this.$route.params.lang == undefined && (this.$route.path == "/" || this.$route.path == "/work")){ /* We want to redirect people to /en by default but only if they are accessing an "app zone" */
+            this.lang = en;
+            router.push({ path: '/en' + this.$route.path });
+        }
+        else if(this.$route.params.lang == "en"){ /* Else calculate which language to choose depending on the url param */
+            this.lang = en
+        } else if (this.$route.params.lang == "ca"){
+            this.lang = ca
+        } else if(this.$route.params.lang == "es"){
+            this.lang = es
+        }
+    },
     methods: {
-        updateLang: function(languageId){
+        updateLang: function(languageId) {
             /* Update current app language to the passed one, which is a prop from the clicked button */
-            this.activeLanguage = languageId;
-           
+            this.$route.params.lang = languageId;
+            router.push({path: '/' + this.$route.params.lang + '/' + (this.$route.meta.zone || '')});
+
            /* Depending on the new language id, load it's corresponding language object */
-           if(languageId == 0){
+           if(languageId == "en"){
                 this.lang = en
-           } else if (languageId == 1){
+           } else if (languageId == "ca"){
                 this.lang = ca
-           } else if(languageId == 2){
+           } else if(languageId == "es"){
                 this.lang = es
            }
+        },
+        handleBack: function() {
+            router.push({path: '/' + this.$route.params.lang + '/'}); /* Since we have the lang paremeter in the url, we can't just go back, we must compute the url */
+        },
+        backFrom404: function() {
+            router.push({path: '/en/'}); /* Since we have the lang paremeter in the url, we can't just go back, we must compute the url */
         }
     }
 }).$mount('#app-root')

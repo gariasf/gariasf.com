@@ -3,7 +3,7 @@
        <span id="not-found">
             <h1 class="flex flex-full-center"><Icon name="not-found" />&nbsp;404 - Not Found</h1>
             <h2>{{this.$root.lang.notFound.wtf}}</h2>
-            <p>{{this.$root.lang.notFound.help}} <router-link to="/" ><LargeButton :buttonText="this.$root.lang.notFound.homeLink" transparent="true" inline="true" /></router-link></p>
+            <p>{{this.$root.lang.notFound.help}} <a v-on:click.prevent="$root.backFrom404()" ><LargeButton :buttonText="this.$root.lang.notFound.homeLink" transparent="true" inline="true" /></a></p>
        </span>
        <SmOverlay />
     </div>

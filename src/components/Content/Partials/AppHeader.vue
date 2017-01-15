@@ -1,6 +1,6 @@
 <template>
      <div class="card-header flex flex-full-center no-select">
-            <router-link class="home-link" to="/"><Icon v-if="$route.path == '/work'" name="arrow-back" pointer="true"/></router-link>
+            <a class="home-link" v-on:click.prevent="$root.handleBack()"><Icon v-if="$route.meta.zone == 'work'" name="arrow-back" pointer="true"/></a>
             <span id="content-title" class="flex-cross-center">
                 <Icon :name="getIconName()" isSmall="true" />&nbsp;<span>{{this.getTitle()}}</span>
             </span>
@@ -20,22 +20,16 @@
         },
         methods: {
             getIconName: function(){
-                /* Remove special chars */
-                let trimmedPath = /\w+/.exec(this.$route.path);
-
-                if(trimmedPath == null){ /* If if we are at root path, we are home :) */
+                if(this.$route.meta.zone == undefined){ /* If if we are at root path, we are home :) */
                     return 'account';
-                } else if(trimmedPath[0] == 'work'){
+                } else if(this.$route.meta.zone == 'work'){
                     return 'array';
                 } 
             },
             getTitle: function() {
-                 /* Remove special chars */
-                let trimmedPath = /\w+/.exec(this.$route.path);
-
-                if(trimmedPath == null){ /* If if we are at root path, we are home :) */
+                if(this.$route.meta.zone == undefined){ /* If if we are at root path, we are home :) */
                     return this.$root.lang.header.home;
-                } else if(trimmedPath[0] == 'work'){
+                } else if(this.$route.meta.zone == 'work'){
                     return this.$root.lang.header.work;
                 } 
             }
