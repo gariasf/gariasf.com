@@ -1,20 +1,26 @@
 <template>
     <span class="list-item flex flex-main-center">
-        <a :href="url" target="_blank">
-            <Icon name="link" />&nbsp;<span>{{title}}</span>
+        <a :href="workData.url" target="_blank">
+            <Icon name="link" />&nbsp;<span>{{workData.title}}</span>
         </a>
-        <a href="#!" class="view-more-link"><Icon name="details" /></a>
+        <a v-on:click.prevent="handleClick" class="view-more-link pointer"><Icon name="forward-arrow" /></a>
     </span>
 </template>
 
 <script>
     import Icon from './Icons.vue'
+    import WorkCard from './../Content/Partials/Work/WorkCard.vue'
 
     export default {
         name: 'list-item',
         components: {
             Icon
         },
-        props: ['item-name', 'title', 'url']
+        props: ['workData'],
+        methods: {
+            handleClick: function(){
+                this.$root.handleWorkFromId(this.workData.id);
+            }
+        }
     }
 </script>

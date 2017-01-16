@@ -28,6 +28,8 @@
 
 @media (max-width: $break-sm) {
     #content-card {
+        overflow-x: hidden!important;
+        overflow-y: scroll!important;
         position: absolute;
         border-radius: 0px;
         top: 0;

@@ -1,6 +1,8 @@
 <template>
     <div id="work" class="flex no-select">
-        <WorkList />
+        <transition :name="($route.meta.zone == 'work-det') ? 'slide-from-right' : 'slide-from-left'">
+            <router-view></router-view>
+        </transition>
     </div>
 </template>
 

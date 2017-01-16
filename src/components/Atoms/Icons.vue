@@ -28,6 +28,11 @@
         <path fill="#000000" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
     </svg>
 
+    <!-- Forward Arrow -->
+    <svg v-else-if="name=='forward-arrow'" :class="['list-icon', {'pointer': pointer == 'true'}, 'forward-arrow', {'small': isSmall == 'true'}]" viewBox="0 0 24 24">
+        <path fill="#000000" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+    </svg>
+
     <!-- Earth -->
     <svg v-else-if="name=='earth'" :class="['svg-icon', {'pointer': pointer == 'true'}, 'earth', {'small': isSmall == 'true'}]" viewBox="0 0 24 24">
         <path fill="#000000" d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
@@ -46,11 +51,6 @@
     <!-- Link -->
     <svg v-else-if="name=='link'" :class="['list-icon', {'pointer': pointer == 'true'}, 'link', {'small': isSmall == 'true'}]" viewBox="0 0 24 24">
         <path fill="#000000" d="M16,6H13V7.9H16C18.26,7.9 20.1,9.73 20.1,12A4.1,4.1 0 0,1 16,16.1H13V18H16A6,6 0 0,0 22,12C22,8.68 19.31,6 16,6M3.9,12C3.9,9.73 5.74,7.9 8,7.9H11V6H8A6,6 0 0,0 2,12A6,6 0 0,0 8,18H11V16.1H8C5.74,16.1 3.9,14.26 3.9,12M8,13H16V11H8V13Z" />
-    </svg>
-
-    <!-- Details -->
-    <svg v-else-if="name=='details'" :class="['list-icon', {'pointer': pointer == 'true'}, 'details', {'small': isSmall == 'true'}]" viewBox="0 0 24 24">
-        <path fill="#000000" d="M2,3H22C23.05,3 24,3.95 24,5V19C24,20.05 23.05,21 22,21H2C0.95,21 0,20.05 0,19V5C0,3.95 0.95,3 2,3M14,6V7H22V6H14M14,8V9H21.5L22,9V8H14M14,10V11H21V10H14M8,13.91C6,13.91 2,15 2,17V18H14V17C14,15 10,13.91 8,13.91M8,6A3,3 0 0,0 5,9A3,3 0 0,0 8,12A3,3 0 0,0 11,9A3,3 0 0,0 8,6Z" />
     </svg>
 
     <!-- Not Found -->

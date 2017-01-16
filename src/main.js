@@ -13,6 +13,8 @@ import ca from './assets/lang/langCa.js'
 /* Content components */
 import Home from './components/Content/Home.vue'
 import Work from './components/Content/Work.vue'
+import WorkCard from './components/Content/Partials/Work/WorkCard.vue'
+import WorkList from './components/Content/Partials/Work/WorkList.vue'
 
 Vue.use(VueRouter)
 Vue.use(VTooltip)
@@ -30,7 +32,16 @@ const router = new VueRouter({
             {
                 path: 'work',
                 component: Work,
-                meta: { zone: 'work' }
+                children: [
+                    {
+                        path: '', component: WorkList,
+                        meta: {zone: 'work'}
+                    },
+                    {
+                        path: ':work(\\d+)', component: WorkCard,
+                        meta: {zone: 'work-det'}
+                    }
+                ]
             }
         ],
     },
@@ -43,7 +54,8 @@ new Vue({
     router,
     data () {
         return {
-            lang: en /* Set the default language object */
+            lang: en, /* Set the default language object */
+            modalOpen: false
         }
     },
     mounted () {
@@ -63,22 +75,32 @@ new Vue({
         updateLang: function(languageId) {
             /* Update current app language to the passed one, which is a prop from the clicked button */
             this.$route.params.lang = languageId;
-            router.push({path: '/' + this.$route.params.lang + '/' + (this.$route.meta.zone || '')});
+            if(!this.$route.params.work){
+                router.push({path: '/' + this.$route.params.lang + '/' + (this.$route.meta.zone || '')});
+            } else {
+                router.push({path: '/' + this.$route.params.lang + '/work/' + this.$route.params.work});
+            }
 
-           /* Depending on the new language id, load it's corresponding language object */
-           if(languageId == "en"){
+            /* Depending on the new language id, load it's corresponding language object */
+            if(languageId == "en"){
                 this.lang = en
-           } else if (languageId == "ca"){
-                this.lang = ca
-           } else if(languageId == "es"){
+            } else if (languageId == "ca"){
+                    this.lang = ca
+            } else if(languageId == "es"){
                 this.lang = es
-           }
+            }
         },
         handleBack: function() {
             router.push({path: '/' + this.$route.params.lang + '/'}); /* Since we have the lang paremeter in the url, we can't just go back, we must compute the url */
         },
         backFrom404: function() {
             router.push({path: '/en/'}); /* Since we have the lang paremeter in the url, we can't just go back, we must compute the url */
+        },
+        handleWorkFromId: function(workId){
+            router.push({path: '/' + this.$route.params.lang + '/work/' + workId});
+        },
+        handleBackWork: function(){
+            router.push({path: '/' + this.$route.params.lang + '/work/'});
         }
     }
 }).$mount('#app-root')

@@ -36,6 +36,7 @@
 .telegram path,
 .email path, 
 .link path,
+.forward-arrow path,
 .details path,
 .filter-ch path {
     -webkit-transition: fill .2s ease-in;
@@ -62,7 +63,6 @@
     height: 24px;
     margin: 0;
 }
-
 
 /* Hover settings */
 .twitter:hover path{

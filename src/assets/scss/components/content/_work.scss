@@ -6,14 +6,23 @@
     padding: 0 0 15px 0;
 }
 
+#work-card {
+    background: #fff;
+    padding: 15px;
+    width: 100%;
+    position: absolute;
+    height: 86%;
+}
+
 .list-container {
+    margin: 5px 0;
     overflow: overlay;
     max-height: 94%;
     padding: 0 15px;
 }
 
 .filter-tool {
-    border-radius: 2px;
+    overflow: hidden;
     padding: 5px;
     font-size: .78em;
     justify-content: flex-end;
@@ -23,4 +32,11 @@
     .filter-type {
         margin: 0 10px;
     }
+}
+
+.work-not-found {
+    color: $main-color;
+    font-weight: 300;
+    font-size: 1.2em;
+    text-align: center;
 }

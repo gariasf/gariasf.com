@@ -1,6 +1,6 @@
 <template>
     <div id="lang-selector" class="flex no-select" v-on-clickaway.prevent="handleClickAway" v-tooltip.left-middle="this.$root.lang.tooltip.languageMenu">
-        <a v-on:click.prevent="handleClick()"><Icon name="earth" pointer="true" /></a>
+        <span v-on:click.prevent="handleClick"><Icon name="earth" pointer="true" /></span>
         <transition name="translate">
             <div v-if="this.listActive" id="language-list">
                 <LangButton languageId="en" :activeLanguage=$route.params.lang :handleMenu="handleClick" />
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    import { mixin as clickaway } from 'vue-clickaway';
+    import { mixin as clickaway } from 'vue-clickaway'
     import LangButton from './../../Atoms/LangButton.vue'
     import Icon from './../../Atoms/Icons.vue'
     

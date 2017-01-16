@@ -6,7 +6,7 @@
             <span class="filter-type flex flex-full-center pointer" v-on:click.prevent="manageFilter(2)"><Icon :name="currentFilter == 'nethruster' ? 'ch-ch' : 'ch-empty'" />&nbsp;Nethruster</span>
         </div>
         <div class="list-container">
-            <ListItem v-for="item in workData" v-if="item.url && (item.type == currentFilter) || currentFilter == 'all'" :title="item.title" :item-name="item.name" :url="item.url" />
+            <ListItem v-for="item in this.workData" v-if="item.url && (item.type == currentFilter || currentFilter == 'all')" :workData="item" />
         </div>
     </div>
 </template>
@@ -24,7 +24,7 @@
         },
         data: function(){
             return {
-                workData: WorkData,
+                workData: WorkData.workList,
                 filters: ["all", "client", "nethruster"],
                 currentFilter: 'all'
             }
