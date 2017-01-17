@@ -1,6 +1,6 @@
 <template>
     <span class="list-item flex flex-main-center">
-        <a :href="workData.url" target="_blank">
+        <a :href="workData.url" target="_blank" rel="noopener">
             <Icon name="link" />&nbsp;<span>{{workData.title}}</span>
         </a>
         <a v-on:click.prevent="handleClick" class="view-more-link pointer"><Icon name="forward-arrow" /></a>

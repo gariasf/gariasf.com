@@ -3,6 +3,7 @@
 	"short_name": "gariasf",
 	"start_url": "/",
 	"theme_color": "#263238",
+    "background_color": "#263238",
 	"display": "fullscreen",
 	"description": "Hi, I'm Guillem Arias, I code things.",
 	"icons": [
