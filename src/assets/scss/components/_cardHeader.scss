@@ -3,11 +3,35 @@
     top: 50px;
     background-color: #fff;
     border-radius: 0 0 2px 2px;
-    padding: 10px;
     right: 0;
-    left: 0;
-    width: 100%;
+    padding: 5px;
     @include box_shadow(2);
+   
+    &::before {
+        content: "";
+        border-style: solid;
+        border-width: 10px;
+        border-color: transparent transparent #fff transparent;
+        position: absolute;
+        right: 24px;
+        bottom: 100%;
+    }
+
+    &.root-selector {
+        box-shadow: none;
+        left: 0;
+        text-align: center;
+    }
+}
+
+.root-ls-title {
+    color: darken($accent-color, 5%);
+    font-weight: 300;
+    padding: 14px;
+    max-width: 400px;
+    font-size: 1.7em;
+    text-align: center;
+    border-bottom: 1px dashed rgba(0,0,0,.1);
 }
 
 #content-title {
@@ -21,6 +45,9 @@
     span {
         white-space: nowrap;
     }
+}
+.language-prompt .card-header {
+    display: none;
 }
 
 .card-header {

@@ -14,6 +14,9 @@ import ca from './assets/lang/langCa.js'
 import Home from './components/Content/Home.vue'
 import Work from './components/Content/Work.vue'
 import WorkCard from './components/Content/Partials/Work/WorkCard.vue'
+import LanguagePrompt from './components/Content/Partials/LanguagePrompt.vue'
+import LanguageSelector from './components/Content/Partials/LanguageSelector.vue'
+import RootLanguageSelector from './components/Content/Partials/RootLanguageSelector.vue'
 import WorkList from './components/Content/Partials/Work/WorkList.vue'
 
 Vue.use(VueRouter)
@@ -45,6 +48,14 @@ const router = new VueRouter({
             }
         ],
     },
+    {path: '/', component: LanguagePrompt,
+        children: [
+            {
+                path: '', 
+                component: RootLanguageSelector
+            }
+        ]
+    },
     /* If none of the above matches, show 404 err */
     {path: '*', component: NotFound}
   ]
@@ -62,8 +73,7 @@ new Vue({
         if(this.$route.params.lang == undefined && (this.$route.path == "/" || this.$route.path == "/work")){ /* We want to redirect people to /en by default but only if they are accessing an "app zone" */
             this.lang = en;
             router.push({ path: '/en' + this.$route.path });
-        }
-        else if(this.$route.params.lang == "en") { /* Else calculate which language to choose depending on the url param */
+        } else if(this.$route.params.lang == "en") { /* Else calculate which language to choose depending on the url param */
             this.lang = en
         } else if (this.$route.params.lang == "ca") {
             this.lang = ca

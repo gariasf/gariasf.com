@@ -1,6 +1,6 @@
 <template>
     <div class="lang-button pointer" v-on:click="handleClick" v-touch-ripple>
-        {{languageId}}&nbsp;<span v-if="activeLanguage == languageId">{{this.$root.lang.misc.active}}</span>
+        {{languageString}}&nbsp;<span v-if="activeLanguage == languageId">{{this.$root.lang.misc.active}}</span>
     </div>
 </template>
 
@@ -12,7 +12,7 @@
         components: {
             Icon
         },
-        props: ['languageId', 'activeLanguage', 'handleMenu'],
+        props: ['languageString', 'languageId', 'activeLanguage', 'handleMenu'],
         methods: {
             handleClick: function(){
                 /* Send the button language prop to manage the new language to be set */
