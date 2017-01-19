@@ -21,6 +21,11 @@
         box-shadow: none;
         left: 0;
         text-align: center;
+
+        .lang-button:hover {
+            background-color: darken(#fff, 5%);
+            border-radius: 2px;
+        }
     }
 }
 

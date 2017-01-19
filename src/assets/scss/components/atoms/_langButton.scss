@@ -3,6 +3,8 @@
     color: lighten($main-color, 5%);
     margin: 0 5px;
     text-transform: capitalize;
+    transition: background-color .5s ease;
+
     &:not(:last-of-type){
         border-bottom: 1px solid transparentize($main-color, .8);
     }
