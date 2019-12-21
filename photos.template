@@ -1,0 +1,2 @@
+export const fullPhotos = ${fullPhotosData};
+export const thumbPhotos = ${thumbPhotosData};

@@ -1,8 +1,9 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
+import GalleryGrid from '../components/GalleryGrid';
+import { Container } from '@material-ui/core';
 
-export default function Index() {
+export default function Index(): JSX.Element {
   return (
-      <Button variant="outlined">Button</Button>
+    <Container maxWidth="lg"><GalleryGrid /></Container>
   )
 }
