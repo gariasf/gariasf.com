@@ -5,13 +5,14 @@ const sharp = require('sharp')
 
 const rawImgPath = path.resolve(__dirname, 'public/img/gallery/raw')
 const fullImgPath = path.resolve(__dirname, 'public/img/gallery/full')
-const thumbImgPath = path.resolve(__dirname, 'public/img/gallery/thumbnail')
+const thumbImgPath = path.resolve(__dirname, 'public/img/gallery/thumb')
 
 let photosTemplate = fs.readFileSync(
   path.resolve(__dirname, 'photos.template'),
   'utf-8'
 )
 
+console.log('Cleaning existing files...')
 fse.removeSync(fullImgPath)
 fse.removeSync(thumbImgPath)
 
@@ -31,6 +32,7 @@ const fileData = {
 }
 
 async function handleFiles() {
+  console.log('Procesing files...')
   await Promise.all(
     files.map(async (file, index) => {
       const sharpFileInstance = sharp(
@@ -76,13 +78,17 @@ async function handleFiles() {
         .catch(err => {
           console.error(err)
         })
-    })
-  )
 
+        console.log(`Procesing ${index + 1} out of ${files.length}...`)
+    })
+
+  )
+  console.log('Done')
   return fileData
 }
 
 handleFiles().then(data => {
+  console.log('Generating data file...')
   photosTemplate = photosTemplate.replace(
     /\${fullPhotosData}/gm,
     JSON.stringify(data.full, null, 4)

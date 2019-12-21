@@ -1,13 +1,12 @@
 import React, { Children, Props } from 'react'
 import { Scrollbars } from 'react-custom-scrollbars';
-import useStyles from './styles'
+// @ts-ignore
+import styles from './styles.scss'
 import { Header } from '../Header'
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-import { Toolbar, useScrollTrigger, Zoom, Fab } from '@material-ui/core'
+import { Toolbar, useScrollTrigger, Zoom, Fab, Box } from '@material-ui/core'
 
 function ScrollTop(props) {
-  const classes = useStyles({});
- 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 100,
@@ -18,8 +17,6 @@ function ScrollTop(props) {
       '#back-to-top-anchor',
     );
 
-    console.log(anchor)
-
     if (anchor) {
       anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
@@ -27,7 +24,7 @@ function ScrollTop(props) {
 
   return (
     <Zoom in={trigger}>
-      <div onClick={handleClick} role="presentation" className={classes.backToTopButton}>
+      <div onClick={handleClick} role="presentation" className={styles.backToTopButton}>
         {props.children}
       </div>
     </Zoom>
@@ -36,12 +33,13 @@ function ScrollTop(props) {
 
 export const Layout: React.FunctionComponent = (props) => {
   return (
+    <Box className={styles.root}>
       <Scrollbars autoHeight
       autoHeightMin="100vh"
       universal
       autoHide
       renderThumbVertical={({ style, ...props }) =>
-            <div {...props} style={{ ...style, backgroundColor: 'rgba(255,255,255,.4)', borderRadius: '4px', }}/>
+            <div {...props} style={{ ...style, backgroundColor: 'rgba(255,255,255,.4)', borderRadius: '4px', zIndex: 1}}/>
         }
     >
      <Header />
@@ -53,5 +51,6 @@ export const Layout: React.FunctionComponent = (props) => {
       </ScrollTop>
       {props.children}
       </Scrollbars>
+      </Box>
   )
 }

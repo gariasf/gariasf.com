@@ -22,6 +22,11 @@ const getBuildConfig = (...args) => {
     sassLoaderOptions: {
       includePaths: [path.join(process.cwd(), 'src', 'common', 'css')],
     },
+    cssModules: true,
+    cssLoaderOptions: {
+      importLoaders: 1,
+      localIdentName: "[local]___[hash:base64:5]",
+    }
   }
 
   const nextConfig = {

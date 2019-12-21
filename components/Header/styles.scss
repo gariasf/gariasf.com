@@ -1,0 +1,44 @@
+.appBar {
+  background-color: rgba(31, 34, 43, 0.86);
+  z-index: 1;
+}
+
+.toolbarButton {
+  & span {
+    text-transform: capitalize;
+  }
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &[disabled] {
+    color: #d0d0d0;
+  }
+
+  border-color: transparent;
+  border-radius: 50px;
+  opacity: 0.9;
+}
+
+.title {
+  flex-grow: 1;
+  line-height: initial;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 500px) {
+    fontsize: 1rem;
+  }
+
+  @media (max-width: 450px) {
+    fontsize: 0.7rem;
+  }
+}
+
+.toolbarContainer {
+  display: flex;
+  padding: 0;
+}

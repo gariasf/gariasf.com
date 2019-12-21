@@ -1,6 +1,8 @@
 import React from 'react'
 
-import useStyles from './styles'
+// @ts-ignore
+import styles from './styles.scss'
+
 import {
   Button,
   AppBar,
@@ -8,7 +10,6 @@ import {
   Container,
   Typography,
   useScrollTrigger,
-  Zoom,
 } from '@material-ui/core'
 
 function ElevationScroll(props) {
@@ -22,18 +23,19 @@ function ElevationScroll(props) {
   });
 }
 
-
-
-
-
 export const Header: React.FunctionComponent = (props) => {
-  const classes = useStyles({})
   return (
     <ElevationScroll {...props}>
-      <AppBar className={classes.appBar}>
+      <AppBar 
+      className={styles.appBar}
+      >
         <Toolbar>
-          <Container maxWidth="lg" className={classes.toolbarContainer}>
-            <Typography variant="h6" color="primary" className={classes.title}>
+          <Container maxWidth="lg" 
+          className={styles.toolbarContainer}
+          >
+            <Typography variant="h6" color="primary" 
+            className={styles.title}
+            >
               Little pieces of time
             </Typography>
             <Button
@@ -41,7 +43,7 @@ export const Header: React.FunctionComponent = (props) => {
               variant="outlined"
               href="https://github.com/gariasf"
               target="_blank"
-              className={classes.toolbarButton}
+              className={styles.toolbarButton}
             >
               OSS
             </Button>
@@ -49,7 +51,7 @@ export const Header: React.FunctionComponent = (props) => {
               color="primary"
               variant="outlined"
               disabled
-              className={classes.toolbarButton}
+              className={styles.toolbarButton}
             >
               About
             </Button>

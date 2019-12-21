@@ -1,7 +1,7 @@
 import React from 'react'
 import App from 'next/app'
 import Head from 'next/head'
-import { ThemeProvider } from '@material-ui/core/styles'
+import { ThemeProvider, StylesProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../components/theme'
 import { Layout } from '../components/Layout'
@@ -23,6 +23,7 @@ export default class MyApp extends App {
         <Head>
           <title>Guillem Arias</title>
         </Head>
+        <StylesProvider injectFirst>
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
@@ -30,6 +31,7 @@ export default class MyApp extends App {
             <Component {...pageProps} />
           </Layout>
         </ThemeProvider>
+        </StylesProvider>
       </React.Fragment>
     )
   }
