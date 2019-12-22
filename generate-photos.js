@@ -2,7 +2,8 @@ const fse = require('fs-extra')
 const fs = require('fs')
 const path = require('path')
 const sharp = require('sharp')
-var exif = require('exif-reader');
+const exif = require('exif-reader')
+const date = require('date-fns').format
 
 const rawImgPath = path.resolve(__dirname, 'public/img/gallery/raw')
 const fullImgPath = path.resolve(__dirname, 'public/img/gallery/full')
@@ -39,24 +40,22 @@ async function handleFiles() {
       const sharpFileInstance = sharp(
         fs.readFileSync(path.resolve(rawImgPath, file))
       )
-      const fileMetadata = await sharpFileInstance.metadata()
-
-      var data = exif(fileMetadata.exif);
-      console.log(data)
+      const webpFullPath = path.resolve(fullImgPath, `${index.toString()}.webp`)
       const webpThumbPath = path.resolve(
         thumbImgPath,
         `${index.toString()}.webp`
       )
-      const webpFullPath = path.resolve(fullImgPath, `${index.toString()}.webp`)
-      // const jpgThumbPath = path.resolve(thumbImgPath, `${index.toString()}.jpg`)
-      // const jpgFullPath = path.resolve(fullImgPath, `${index.toString()}.jpg`)
-
+      const fileMetadata = await sharpFileInstance.metadata()
+      const exifData = exif(fileMetadata.exif)
+      console.log(exifData)
       const imageAr = gcd(fileMetadata.width, fileMetadata.height)
-
       const fullDataObj = {
         src: `/img/gallery/full/${index.toString()}.webp`,
         width: fileMetadata.width / imageAr,
         height: fileMetadata.height / imageAr,
+        title: `${date(exifData.exif.DateTimeOriginal, 'dd-MM-yyyy')} | ${
+          exifData.image.Make.split(' ')[0]
+        } - ${exifData.image.Model}`,
       }
 
       const thumbDataObj = {
@@ -69,8 +68,8 @@ async function handleFiles() {
       fileData.thumb.push(thumbDataObj)
 
       sharpFileInstance
-        .resize({ width: Math.round(fileMetadata.width / 2) })
-        .webp()
+        .resize({ width: Math.round(fileMetadata.width / 2.5) })
+        .webp({ quality: 75 })
         .toFile(webpThumbPath)
         .catch(err => {
           console.error(err)
@@ -83,9 +82,8 @@ async function handleFiles() {
           console.error(err)
         })
 
-        console.log(`Procesing ${index + 1} out of ${files.length}...`)
+      console.log(`Procesing ${index + 1} out of ${files.length}...`)
     })
-
   )
   console.log('Done')
   return fileData
@@ -102,8 +100,5 @@ handleFiles().then(data => {
     JSON.stringify(data.thumb, null, 4)
   )
 
-  fse.writeFileSync(
-    path.resolve(__dirname, 'photos.js'),
-    photosTemplate
-  )
+  fse.writeFileSync(path.resolve(__dirname, 'photos.js'), photosTemplate)
 })
