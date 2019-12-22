@@ -42,3 +42,19 @@
   display: flex;
   padding: 0;
 }
+
+.contactLink {
+  opacity: .85;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.dialogContent {
+  opacity: .9;
+}
+
+.dialogTitle {
+  display: flex;
+  align-items: center;
+}
