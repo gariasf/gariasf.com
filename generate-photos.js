@@ -2,6 +2,7 @@ const fse = require('fs-extra')
 const fs = require('fs')
 const path = require('path')
 const sharp = require('sharp')
+var exif = require('exif-reader');
 
 const rawImgPath = path.resolve(__dirname, 'public/img/gallery/raw')
 const fullImgPath = path.resolve(__dirname, 'public/img/gallery/full')
@@ -39,6 +40,9 @@ async function handleFiles() {
         fs.readFileSync(path.resolve(rawImgPath, file))
       )
       const fileMetadata = await sharpFileInstance.metadata()
+
+      var data = exif(fileMetadata.exif);
+      console.log(data)
       const webpThumbPath = path.resolve(
         thumbImgPath,
         `${index.toString()}.webp`
