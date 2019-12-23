@@ -112,8 +112,8 @@ export const Header: React.FunctionComponent = props => {
         <Toolbar>
           <Container maxWidth="lg" className={styles.toolbarContainer}>
             <Typography variant="h6" color="primary" className={styles.title}>
-              <CameraTwoToneIcon />
-              &nbsp; Little pieces of time
+              <CameraTwoToneIcon className={styles.titleIcon}/>
+              Little pieces of time
             </Typography>
             <Button
               color="primary"
