@@ -40,27 +40,28 @@ async function handleFiles() {
       const sharpFileInstance = sharp(
         fs.readFileSync(path.resolve(rawImgPath, file))
       )
-      const webpFullPath = path.resolve(fullImgPath, `${index.toString()}.webp`)
-      const webpThumbPath = path.resolve(
+      const pngFullPath = path.resolve(fullImgPath, `${index.toString()}.png`)
+      const jpegThumbPath = path.resolve(
         thumbImgPath,
-        `${index.toString()}.webp`
+        `${index.toString()}.jpeg`
       )
       const fileMetadata = await sharpFileInstance.metadata()
       const exifData = exif(fileMetadata.exif)
-      console.log(exifData)
       const imageAr = gcd(fileMetadata.width, fileMetadata.height)
       const fullDataObj = {
-        src: `/img/gallery/full/${index.toString()}.webp`,
+        src: `/img/gallery/full/${index.toString()}.png`,
         width: fileMetadata.width / imageAr,
         height: fileMetadata.height / imageAr,
+        date: exifData.exif.DateTimeOriginal,
         title: `${date(exifData.exif.DateTimeOriginal, 'dd-MM-yyyy')} | ${
           exifData.image.Make.split(' ')[0]
         } - ${exifData.image.Model}`,
       }
 
       const thumbDataObj = {
-        src: `/img/gallery/thumb/${index.toString()}.webp`,
+        src: `/img/gallery/thumb/${index.toString()}.jpeg`,
         width: fileMetadata.width / imageAr,
+        date: exifData.exif.DateTimeOriginal,
         height: fileMetadata.height / imageAr,
       }
 
@@ -68,16 +69,16 @@ async function handleFiles() {
       fileData.thumb.push(thumbDataObj)
 
       sharpFileInstance
-        .resize({ width: Math.round(fileMetadata.width / 2.5) })
-        .webp({ quality: 75 })
-        .toFile(webpThumbPath)
+        .resize({ width: Math.round(fileMetadata.width / 4) })
+        .jpeg({ quality: 50 })
+        .toFile(jpegThumbPath)
         .catch(err => {
           console.error(err)
         })
 
       sharpFileInstance
-        .webp({ lossless: true })
-        .toFile(webpFullPath)
+        .png({ lossless: true, quality: 100 })
+        .toFile(pngFullPath)
         .catch(err => {
           console.error(err)
         })
@@ -86,6 +87,16 @@ async function handleFiles() {
     })
   )
   console.log('Done')
+  fileData.thumb = fileData.thumb.sort((a, b) => {
+    var dateA = new Date(a.date);
+    var dateB = new Date(b.date);
+    return dateB - dateA;
+  })
+  fileData.full = fileData.full.sort((a, b) => {
+    var dateA = new Date(a.date);
+    var dateB = new Date(b.date);
+    return dateB - dateA;
+  })
   return fileData
 }
 
