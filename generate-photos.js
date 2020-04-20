@@ -40,16 +40,16 @@ async function handleFiles() {
       const sharpFileInstance = sharp(
         fs.readFileSync(path.resolve(rawImgPath, file))
       )
-      const pngFullPath = path.resolve(fullImgPath, `${index.toString()}.png`)
+      const jpegFullPath = path.resolve(fullImgPath, `${index.toString()}.jpg`)
       const jpegThumbPath = path.resolve(
         thumbImgPath,
-        `${index.toString()}.jpeg`
+        `${index.toString()}.jpg`
       )
       const fileMetadata = await sharpFileInstance.metadata()
       const exifData = exif(fileMetadata.exif)
       const imageAr = gcd(fileMetadata.width, fileMetadata.height)
       const fullDataObj = {
-        src: `/img/gallery/full/${index.toString()}.png`,
+        src: `/img/gallery/full/${index.toString()}.jpg`,
         width: fileMetadata.width / imageAr,
         height: fileMetadata.height / imageAr,
         date: exifData.exif.DateTimeOriginal,
@@ -59,7 +59,7 @@ async function handleFiles() {
       }
 
       const thumbDataObj = {
-        src: `/img/gallery/thumb/${index.toString()}.jpeg`,
+        src: `/img/gallery/thumb/${index.toString()}.jpg`,
         width: fileMetadata.width / imageAr,
         date: exifData.exif.DateTimeOriginal,
         height: fileMetadata.height / imageAr,
@@ -77,8 +77,8 @@ async function handleFiles() {
         })
 
       sharpFileInstance
-        .png({ lossless: true, quality: 100 })
-        .toFile(pngFullPath)
+        .jpeg({ loseless: true, quality: 100 })
+        .toFile(jpegFullPath)
         .catch(err => {
           console.error(err)
         })
